@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".delivery_address.DeliveryAddressFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        android:scrollbars="vertical">
+
+
+        <!--layout main-->
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            <!--CardView delivery address details-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="2dp"
+                app:contentPadding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stroke"
+                    android:orientation="vertical">
+
+                    <!--layout title devliery address-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorLightPrimary"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="H/W Kit Delivery Address Details"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!--layout head-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/greylight"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <TextView
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Delivery Address Type" />
+
+                            <Spinner
+                                android:id="@+id/spinnerDeliveryAddressType"
+                                android:layout_width="match_parent"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/gradient_white_spinner"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutMainAddressDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:orientation="vertical">
+
+                            <!--layout address 1 and 2-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textviewAddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="5dp"
+                                        android:text="Address"
+                                        android:textColor="@color/gray"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:orientation="vertical">
+
+                                        <EditText
+                                            android:id="@+id/editTextAddressLine1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="left"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/edittext_bottom_bg"
+                                            android:gravity="top"
+                                            android:hint="Address Line 1"
+                                            android:inputType="textMultiLine|textCapWords"
+                                            android:lines="3"
+                                            android:maxLength="35"
+                                            android:paddingLeft="10dp"
+                                            android:paddingTop="3dp"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="3dp"
+                                            android:gravity="left"
+                                            android:text="Maximum of 35 characters allowed."
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/layoutAddressLine2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="left"
+                                        android:orientation="vertical"
+                                        android:weightSum="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:orientation="vertical">
+
+                                                <EditText
+                                                    android:id="@+id/editTextAddressLine2"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="left"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/edittext_bottom_bg"
+                                                    android:gravity="top"
+                                                    android:hint="Address Line 2"
+                                                    android:inputType="textMultiLine|textCapWords"
+                                                    android:lines="3"
+                                                    android:maxLength="35"
+                                                    android:paddingLeft="10dp"
+                                                    android:paddingTop="3dp"
+                                                    android:textColor="@color/gray"
+                                                    android:textSize="12sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:layout_marginTop="3dp"
+                                                    android:gravity="left"
+                                                    android:text="Maximum of 35 characters allowed."
+                                                    android:textColor="@color/gray"
+                                                    android:textSize="12sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!--layout landmark-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textviewLandmark"
+                                        style="@style/franchisee_form_header"
+                                        android:layout_weight="0.6"
+                                        android:text="Landmark" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:orientation="horizontal"
+                                    android:padding="1dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@color/grey"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:src="@drawable/ic_location_on_black_24dp" />
+
+                                    <EditText
+                                        android:id="@+id/editTextLandMark"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="left"
+                                        android:layout_weight="1"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="left|center"
+                                        android:hint="Landmark"
+                                        android:inputType="text|textCapWords"
+                                        android:maxLength="35"
+                                        android:paddingLeft="10dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/gray"
+                                        android:textSize="12sp"
+                                        android:textStyle="normal" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:gravity="left"
+                                    android:text="Maximum of 35 characters allowed."
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+                            <!--layout state-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/textviewState"
+                                    style="@style/franchisee_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="State" />
+
+
+                                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                                    android:id="@+id/spinnerState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="38dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/gradient_white_spinner"
+                                    android:dropDownWidth="match_parent"
+                                    android:gravity="center"
+                                    android:spinnerMode="dropdown"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <!--layout district-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/textviewDistrict"
+                                    style="@style/franchisee_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="District" />
+
+
+                                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                                    android:id="@+id/spinnerDistrict"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="38dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/gradient_white_spinner"
+                                    android:dropDownWidth="match_parent"
+                                    android:gravity="center"
+                                    android:spinnerMode="dropdown"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <!--layout VTC-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/textviewVTC"
+                                    style="@style/franchisee_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="Village/Town/City" />
+
+                                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                                    android:id="@+id/spinnerVTC"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="38dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/gradient_white_spinner"
+                                    android:dropDownWidth="match_parent"
+                                    android:gravity="center"
+                                    android:spinnerMode="dropdown"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <!--layout pincode-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textviewPinCode"
+                                        style="@style/franchisee_form_header"
+                                        android:layout_weight="0.6"
+                                        android:text="Pincode" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/edittext_roundshape_corner"
+                                        android:orientation="horizontal"
+                                        android:padding="1dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:background="@color/grey"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:src="@drawable/ic_location_on_black_24dp" />
+
+                                        <EditText
+                                            android:id="@+id/editTextPincode"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="left"
+                                            android:layout_weight="1"
+                                            android:background="@android:color/transparent"
+                                            android:gravity="left|center"
+                                            android:hint="Pincode"
+                                            android:inputType="number"
+                                            android:maxLength="6"
+                                            android:paddingLeft="10dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/gray"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--CardView flex details-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewFlex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="2dp"
+                app:contentPadding="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stroke"
+                    android:orientation="vertical">
+
+                    <!--layout flex details heder-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorLightPrimary"
+                            android:gravity="left"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="Flex Details"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutMainSignBoard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/greylight"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Days"
+                                android:textSize="12sp"
+                                android:visibility="invisible" />
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Feet"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Inch"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutLength"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLength"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.4"
+                                android:gravity="left"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Length"
+                                android:textColor="@color/gray"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/spinnerProvisionalLengthFeet"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/gradient_white_spinner"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp" />
+
+
+                            <Spinner
+                                android:id="@+id/spinnerProvisionalLengthInch"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/gradient_white_spinner"
+                                android:drawSelectorOnTop="true"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:nextFocusUp="@+id/spinnerWidthFeet"
+                                android:nextFocusDown="@+id/spinnerDepthFeet"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Feet"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutWidth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewWidth"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:gravity="left"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Width (Max. 3 feet)"
+                                android:textColor="@color/gray"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <Spinner
+                                android:id="@+id/spinnerProvisionalWidthFeet"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/gradient_white_spinner"
+                                android:drawSelectorOnTop="true"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:nextFocusDown="@+id/spinnerWidthInch"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Feet"
+                                android:textSize="12sp" />
+
+                            <Spinner
+                                android:id="@+id/spinnerProvisionalWidthInch"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.3"
+                                android:background="@drawable/gradient_white_spinner"
+                                android:drawSelectorOnTop="true"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center"
+                                android:nextFocusUp="@+id/spinnerWidthFeet"
+                                android:nextFocusDown="@+id/spinnerDepthFeet"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Feet"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/layoutFooter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:paddingTop="1dp">
+
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center_vertical|center_horizontal|left"
+                    android:text="Submit"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

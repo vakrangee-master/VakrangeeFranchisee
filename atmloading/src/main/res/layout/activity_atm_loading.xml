@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/MyDrawerArrowToggle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ATM ID / Status Spinner -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tg"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- ATM ID -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtATMIDLbl"
+                style="@style/bca_form_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.3"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="ATM ID"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                android:id="@+id/spinnerATMID"
+                style="@style/myTgSpinnerItemStyle"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/gradient_bg_spinner"
+                android:dropDownWidth="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtStatusLbl"
+                style="@style/bca_form_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.3"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="Status"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                android:id="@+id/spinnerStatus"
+                style="@style/myTgSpinnerItemStyle"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/gradient_bg_spinner"
+                android:dropDownWidth="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGo"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Go"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:theme="@style/MatButtonOld" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:orientation="vertical">
+
+        <!-- Add New Cash Loading -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewAddNewLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            android:visibility="gone"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:layout_margin="5dp"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!-- Sourced Date / Sourced Amount -->
+                <LinearLayout
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Sourced Date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sourced Date"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtSourcedDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="-"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Sourced Amount -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="right"
+                            android:text="Sourced Amount"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtSourcedAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="right"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:text="-"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Cash Loaded / Balance Cash -->
+                <LinearLayout
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Cash Loaded -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cash Loaded"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtCashLoaded"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="-"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Balance Cash -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="right"
+                            android:text="Balance Cash"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/txtBalanceCash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="right"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:text="-"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Add New Cash Loading -->
+                <LinearLayout
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Add New Loading -->
+                    <LinearLayout
+                        android:id="@+id/layoutAddExpense"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAddNewLoading"
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="+ Add New Loading"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:textStyle="normal"
+                            android:theme="@style/LightGreenMatButton" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Cash Loading List -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary_old"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/bca_form_header"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="0.6"
+                    android:gravity="start|center"
+                    android:text="  Cash Loaded List"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="3dp"
+                android:scrollbarSize="2dp"
+                android:scrollbarThumbVertical="@color/colorLightPrimary"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtNoDataMsg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/no_data_available_text"
+                android:textColor="@color/colorGreyL6"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="sans"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

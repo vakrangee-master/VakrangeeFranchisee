@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/MyDrawerArrowToggle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Document Type -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp"
+        app:contentPadding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <!-- Document Type -->
+            <LinearLayout
+                android:id="@+id/layoutDocumentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtDocumentTypeLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Document Type" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerDocumentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- GST Details -->
+        <LinearLayout
+            android:id="@+id/layoutGSTDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentGSTDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.GSTDetailsFragment"
+                class="in.vakrangee.franchisee.documentmanager.GSTDetailsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentGSTDetails" />
+
+        </LinearLayout>
+
+        <!-- PAN Details -->
+        <LinearLayout
+            android:id="@+id/layoutPANDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentPANDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.PANDetailsFragment"
+                class="in.vakrangee.franchisee.documentmanager.PANDetailsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentPANDetails" />
+
+        </LinearLayout>
+
+        <!-- Agreement Upload Details -->
+        <LinearLayout
+            android:id="@+id/layoutAgreementUploadDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentAgreementUploadDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.AgreementUploadFragment"
+                class="in.vakrangee.franchisee.documentmanager.AgreementUploadFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentAgreementUploadDetails" />
+
+        </LinearLayout>
+
+        <!--    IIBF Certification-->
+        <LinearLayout
+            android:id="@+id/layoutIIBFCertificationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentIIBFCertificationDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.IIBFCertificationFragment"
+                class="in.vakrangee.franchisee.documentmanager.IIBFCertificationFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentIIBFCertificationDetails" />
+
+        </LinearLayout>
+
+        <!-- MSME Certification-->
+        <LinearLayout
+            android:id="@+id/layoutMSMECertificationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentMSMECertificationDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.MSMECertificateFragment"
+                class="in.vakrangee.franchisee.documentmanager.MSMECertificateFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentMSMECertificationDetails" />
+
+        </LinearLayout>
+
+        <!-- Shop Establishment Certification-->
+        <LinearLayout
+            android:id="@+id/layoutShopEstCertificationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentShopEstCertificationDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.ShopEstablishmentCertificateFragment"
+                class="in.vakrangee.franchisee.documentmanager.ShopEstablishmentCertificateFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentShopEstCertificationDetails" />
+
+        </LinearLayout>
+
+        <!-- Qualification Certification-->
+        <LinearLayout
+            android:id="@+id/layoutQualificationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentQualificationDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.qualification.QualificationDetailsFragment"
+                class="in.vakrangee.franchisee.documentmanager.qualification.QualificationDetailsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentQualificationDetails" />
+
+        </LinearLayout>
+
+        <!-- Address Details -->
+        <LinearLayout
+            android:id="@+id/layoutAddressDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/fragmentAddressDetails"
+                android:name="in.vakrangee.franchisee.documentmanager.address.AddressDetailsFragment"
+                class="in.vakrangee.franchisee.documentmanager.address.AddressDetailsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="fragmentAddressDetails" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Button clear,submit,cancel -->
+    <LinearLayout
+        android:id="@+id/layoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="1dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonroundclear"
+            android:gravity="center_vertical|center_horizontal|left"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/buttonroundedcancel"
+            android:gravity="center_vertical|center_horizontal|left"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSubmitDocuments"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/buttonroundedsubmit"
+            android:gravity="center_vertical|center_horizontal|left"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

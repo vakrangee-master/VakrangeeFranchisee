@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke"
+        android:orientation="vertical">
+
+        <!-- Outlet Information Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Outlet Information"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBCAOutletInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <!-- Location Type -->
+            <LinearLayout
+                android:id="@+id/layoutLocationType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtLocationTypeLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Location Type" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupLocationType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonRural"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Rural" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonUrban"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Urban" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSemiUrban"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Semi Urban" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMetro"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Metro" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- State -->
+            <LinearLayout
+                android:id="@+id/layoutState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtStateLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="State" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerState"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Division -->
+            <LinearLayout
+                android:id="@+id/layoutDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtDivisionLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Division" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerDivision"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- District -->
+            <LinearLayout
+                android:id="@+id/layoutDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtDistrictLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="District" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerDistrict"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Tehsil/Block -->
+            <LinearLayout
+                android:id="@+id/layoutTehsil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtTehsilLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Tehsil/Block" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerTehsil"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Village/Town/City -->
+            <LinearLayout
+                android:id="@+id/layoutVTC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtVTCLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Village/Town/City" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerVTC"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Ward -->
+            <LinearLayout
+                android:id="@+id/layoutWard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtWardLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Ward" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerWard"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- BCA Outlet Address -->
+            <LinearLayout
+                android:id="@+id/layoutBCAOutletAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtBCAOutletAddressLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="BCA Outlet Address" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextBCAOutletAddress"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="BCA Outlet Address "
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:maxLength="50"
+                            android:padding="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Locality -->
+            <LinearLayout
+                android:id="@+id/layoutLocality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtLocalityLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Locality" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextLocality"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Locality"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Pin code -->
+            <LinearLayout
+                android:id="@+id/layoutPincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtPincodeLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Pincode" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/grey"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_location_on_black_24dp" />
+
+                            <EditText
+                                android:id="@+id/editTextPincode"
+                                style="@style/bca_form_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:gravity="top"
+                                android:hint="Pincode"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:padding="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/CommonRepo/VakrangeeSuperCore/supercore/src/main/res/drawable/ic_camera_alt_black_72dp.xml" value="0.146" />
+        <entry key="..\:/Android/CommonRepo/VakrangeeSuperCore/supercore/src/main/res/drawable/round_oval.xml" value="0.1" />
+        <entry key="..\:/Android/CommonRepo/VakrangeeSuperCore/supercore/src/main/res/layout/dialog_custom_webview.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/CommonRepo/VakrangeeSuperCore/supercore/src/main/res/layout/dialog_image_preview.xml" value="0.1796875" />
+        <entry key="..\:/Android/CommonRepo/VakrangeeSuperCore/supercore/src/main/res/layout/layout_progress_text.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/drawable/round_oval_dark_bg_franchisee.xml" value="0.1" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/activity_dashboard.xml" value="0.1796875" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/activity_franchisee_enquiry_details.xml" value="0.1796875" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/activity_franchisee_login.xml" value="0.1796875" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/activity_franchisee_splash.xml" value="0.1796875" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/activity_main.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/activity_webview.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/adapter_dashboard_menu.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/dialog_custom_all_img_preview.xml" value="0.1" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/frag_enquiry_details.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/fragment_dashboard_menu_fragement.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/fragment_delivery_address.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/app/src/main/res/layout/fragment_fragment1.xml" value="0.16770833333333332" />
+        <entry key="..\:/Android/VakrangeeFranchisee/sitelayout/src/main/res/layout/fragment_mandatory_branding_interior.xml" value="0.11141304347826086" />
+        <entry key="..\:/Android/VakrangeeFranchisee/sitelayout/src/main/res/layout/fragment_my_vakrangee_kendra_location_fragment_next_gen.xml" value="0.1" />
+        <entry key="..\:/Android/VakrangeeFranchisee/sitelayout/src/main/res/layout/fragment_my_vakrangee_kendra_next_gen_photo.xml" value="0.1796875" />
+        <entry key="..\:/Android/VakrangeeFranchisee/sitelayout/src/main/res/layout/fragment_my_vakrangee_kendra_profile_fragement.xml" value="0.11141304347826086" />
+        <entry key="..\:/Android/VakrangeeFranchisee/sitelayout/src/main/res/layout/item_interior_mandatory.xml" value="0.1796875" />
+        <entry key="..\:/Android/VakrangeeFranchisee/sitelayout/src/main/res/layout/popupaddimage_premise.xml" value="0.1796875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

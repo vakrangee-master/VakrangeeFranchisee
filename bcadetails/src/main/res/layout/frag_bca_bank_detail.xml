@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke"
+        android:orientation="vertical">
+
+        <!-- BCA Bank Information Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Bank Information"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+        </LinearLayout>
+
+        <!-- Details -->
+        <LinearLayout
+            android:id="@+id/layoutBankParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <!-- Bank Name -->
+            <LinearLayout
+                android:id="@+id/layoutBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtBankNameLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Bank Name" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!-- Bank A/c No -->
+            <LinearLayout
+                android:id="@+id/layoutAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtAccountNumberLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Bank A/c No" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextAccountNumber1"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Bank A/c No"
+                            android:inputType="numberPassword"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:id="@+id/editTextAccountNumber2"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Confirm Bank A/c No"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Branch Name -->
+            <LinearLayout
+                android:id="@+id/layoutBranchName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtBranchNameLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Branch Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextBranchName"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Branch Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- BC CBS customer ID -->
+            <LinearLayout
+                android:id="@+id/layoutBCcustomerID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtBCcustomerIDLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="BC CBS customer ID" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextBCcustomerID"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="BC CBS customer ID"
+                            android:inputType="number"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Saving A/c No  -->
+            <LinearLayout
+                android:id="@+id/layoutSavingACNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSavingACNoLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Saving A/c No" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextSavingACNo1"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Saving Account Number"
+                            android:inputType="numberPassword"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                        <EditText
+                            android:id="@+id/editTextSavingACNo2"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Confirm Saving Account Number"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Saving A/c Name -->
+            <LinearLayout
+                android:id="@+id/layoutSavingAcName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSavingAcNameLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Saving A/c Holder Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextSavingAcName"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Saving Account Holder Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Saving A/c IFSC Code -->
+            <LinearLayout
+                android:id="@+id/layoutSavingIFSCCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSavingIFSCCodeLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Saving A/c IFSC Code" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextSavingIFSCCode1"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="IFSC Code"
+                            android:inputType="textPassword|textCapCharacters"
+                            android:maxLength="11"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true" />
+
+                        <EditText
+                            android:id="@+id/editTextSavingIFSCCode2"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Confirm IFSC Code"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="11"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- IFSC Code -->
+            <LinearLayout
+                android:id="@+id/layoutIFSCCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtIFSCCodeLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="IFSC Code" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextIFSCCode1"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="IFSC Code"
+                            android:inputType="textPassword|textCapCharacters"
+                            android:maxLength="11"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true" />
+
+                        <EditText
+                            android:id="@+id/editTextIFSCCode2"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Confirm IFSC Code"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="11"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textAllCaps="true" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- SOL ID -->
+            <LinearLayout
+                android:id="@+id/layoutSOLID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSOLIDLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="SOL ID" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextSOLID"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="SOL ID"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- SSA  -->
+            <LinearLayout
+                android:id="@+id/layoutSSA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSSALbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="SSA" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextSSA"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="SSA "
+                            android:inputType="text"
+                            android:maxLength="16"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CIF Number -->
+            <LinearLayout
+                android:id="@+id/layoutCIFNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCIFNumberLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="CIF Number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextCIFNumber"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="CIF Number "
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- City Code -->
+            <LinearLayout
+                android:id="@+id/layoutCityCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtCityCodeLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="City Code" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextCityCode"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="City Code "
+                            android:inputType="number"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Bank Branch Address -->
+            <LinearLayout
+                android:id="@+id/layoutBankBranchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtBankBranchAddressLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Bank Branch Address" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextBankBranchAddress"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Bank Branch Address "
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:maxLength="40"
+                            android:padding="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Phone Number -->
+            <LinearLayout
+                android:id="@+id/layoutPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtPhoneNumberLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Phone Number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextPhoneNumber"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Phone Number "
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

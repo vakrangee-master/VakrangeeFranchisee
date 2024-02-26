@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        app:contentPadding="5dp">
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/colorPrimary"
+            android:scrollbars="vertical">
+
+            <!-- Upload Acknowledgement Details -->
+            <LinearLayout
+                android:id="@+id/layoutUploadAcknowledgementDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stroke"
+                android:orientation="vertical">
+
+                <!-- Upload Acknowledgement Details Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightPrimary"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Upload Acknowledgement"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+                <!-- Branch Name -->
+                <LinearLayout
+                    android:id="@+id/layoutBranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txBranchNameLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Branch Name" />
+
+                    <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                        android:id="@+id/spinnerBranchName"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/headline_lbl"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtBranchName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="left"
+                        android:textColor="@color/colorPrimaryDark_old"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <!-- Acknowledgement Submission Status -->
+                <LinearLayout
+                    android:id="@+id/layoutAcknowledgementType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtAcknowledgementTypeLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Acknowledgement Submission Status" />
+
+                    <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                        android:id="@+id/spinnerAcknowledgementType"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/headline_lbl"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtAcknowledgementTypeStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="left"
+                        android:textColor="@color/colorPrimaryDark_old"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <!-- Application Submission Date -->
+                <LinearLayout
+                    android:id="@+id/layoutApplicationSubmissionDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtApplicationSubmissionDateLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Application Submission Date" />
+
+                    <TextView
+                        android:id="@+id/textViewApplicationSubmissionDate"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:drawableRight="@drawable/ic_date_range_black_24dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Upload Acknowledgement Copy  -->
+                <LinearLayout
+                    android:id="@+id/layoutUploadAcknowledgement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtUploadAckLbl"
+                                style="@style/bca_form_header"
+                                android:text="Acknowledgement Receipt " />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="left"
+                                android:text="JPG/PDF File Size less than 1 MB"
+                                android:textColor="@color/colorGreyL6"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgUploadAck"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/ic_camera_alt_black_72dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <!-- Is Submitted through Email -->
+                    <LinearLayout
+                        android:id="@+id/layoutSubmittedThroughEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <CheckBox
+                            android:id="@+id/checkboxSubmittedThroughEmail"
+                            style="@style/franchisee_form_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Application Submitted through Email"
+                            android:textColor="@color/colorPrimaryDark_old"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                    </LinearLayout>
+
+                    <!-- Emailed Date -->
+                    <LinearLayout
+                        android:id="@+id/layoutEmailedDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txtEmailedDateLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Emailed Date" />
+
+                        <TextView
+                            android:id="@+id/textViewEmailedDate"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Footer -->
+                <LinearLayout
+                    android:id="@+id/layoutFooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancel"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textStyle="bold"
+                        android:theme="@style/MatButtonCancel" />
+
+                    <!-- Submit -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSubmit"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="Submit"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:theme="@style/MatButtonOld" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

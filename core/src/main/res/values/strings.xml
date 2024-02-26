@@ -1,0 +1,767 @@
+<resources>
+    <string name="app_name">Core</string>
+    <string name="description">v_kendra</string>
+    <string name="title_activity_dashboard">Vakrangee Franchisee</string>
+
+    <string name="drawer_item_home">Home</string>
+    <string name="next_gen_site_visit">NextGen Site Visit</string>
+    <string name="next_gen_site_commencement">NextGen Site Commencement</string>
+    <string name="next_gen_site_work_in_progress">NextGen Site Work In Progress</string>
+
+    <string name="drawer_item_mytranscation">My Transaction</string>
+    <string name="drawer_item_mobilerecharge">Mobile Recharge</string>
+    <string name="drawer_item_dthrecharge">DTH Recharge</string>
+    <string name="client_id">561109841218-ivacq1n68t0i8uk75d530ts258d28hdi.apps.googleusercontent.com</string>
+
+    <!-- Sample menu -->
+    <string name="action_settings">Settings</string>
+    <string name="rs">Current wallet balance available \u20B9 : </string>
+    <!-- Drawer Items -->
+    <string name="title_activity_update_geo_coordinates">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="clear"> Clear</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="mobilerechargeicon">&#xf10b;</string>
+    <string name="dthrechargeicon">&#xf26c;</string>
+
+
+    <!--Registerpage Actitivty-->
+    <string name="cache_path">vkms/cache/</string>
+    <string name="cancel"> Cancel</string>
+    <string name="close">Close</string>
+
+    <string name="submit"> Submit</string>
+    <string name="save"> Save</string>
+    <string name="next">Next</string>
+
+    <string name="signIn">Sign In</string>
+    <!--<string name="internetCheck">No Internet Connection, You dont have internet connection</string>-->
+    <string name="internetCheck">Sorry, no internet connectivity detected. Please reconnect and try again.</string>
+    <string name="insertSimcard">No SIM card detected.</string>
+    <string name="alreadyRegistered">Registration details already exists, Do you want to continue from this Device and proceed.</string>
+    <string name="invalidData">Invalid Data Entered, Please Verify All Information.</string>
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="google_title_text">Google Sign In</string>
+    <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="facebook_title_text">Facebook Login</string>
+    <string name="signed_in">Signed In</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="verified_lbl">Verified</string>
+    <string name="rejected_lbl">Rejected</string>
+    <string name="register">Register</string>
+    <string name="VKID">VKID</string>
+    <string name="name">Name as per Agreement</string>
+    <string name="registeredMobileNumber">Registered Mobile Number</string>
+    <string name="EmailId">Vakrangee Official Email ID</string>
+    <string name="VKMSPassword">VKMS Password</string>
+    <string name="unableToConnectVkms">Unable to connect VKMS Server Please Try Again</string>
+    <string name="usernameNotMatch">Invalid VKID or Password.</string>
+    <string name="enter9DigitsVKID">Enter 9 Character VKID </string>
+    <string name="invalidPassword">Enter Password</string>
+    <string name="pleaseWait">Please Wait!</string>
+    <string name="authenicationUsernamePassword">"Authenticating VKID and Password..."</string>
+    <string name="enter4CharacterName">Enter a minimum of 4 characters</string>
+    <string name="enter10DigitesNumber">Enter 10 Digits Number </string>
+    <string name="invalidEmail">Invalid Email Address</string>
+    <string name="enter6CharacterPassword">Enter 8-20 Character Password</string>
+
+    <string name="enterMpin">Enter 6 Digits Number </string>
+    <!--OTP Actitvity-->
+    <string name="verifyOTP"> Verify  OTP</string>
+    <string name="OTPVerification">OTP  Verification</string>
+    <string name="OTP">OTP</string>
+    <string name="invalidOTP">Invalid OTP  Please Try Again</string>
+    <string name="enterOTP">Enter OTP</string>
+    <string name="enterOTP8character">Enter 8 character OTP</string>
+
+    <!--RegisterPasswor Mpin set-->
+    <string name="setMpin">Please set Mpin</string>
+    <string name="password">Mpin</string>
+    <string name="confrimPassword">Confirm Mpin</string>
+    <string name="passwordNotMatch">Password do not match</string>
+    <string name="passwordVerify">Set Mpin</string>
+
+    <!--<string name="congratulations">Congratulation!!Registration has been done successfully.Please login to continue.</string>-->
+    <string name="congratulations">Congratulation!! Mpin set has been done successfully. Please login to continue.</string>
+
+    <!--Login Actitivity-->
+    <string name="forgotMpin">Forgot Mpin</string>
+    <string name="last_consent_pdf_url">/FLMDocuments?name={name}&amp;date={date}&amp;address={address}&amp;formType=NextGenConsent</string>
+    <string name="consent_pdf_url">https://vkmssit.vakrangee.in/FLMDocuments?name={name}&amp;date={date}&amp;address={address}&amp;formType=NextGenConsent</string>
+
+    <!--MobileRecharge Activity-->
+    <string name="mimnimum2DigitsNumber">Minimum 2 Digits  Amount number</string>
+    <string name="selectServiceProvider">Select Service Provider</string>
+    <string name="mobileRecharge">Mobile Recharge</string>
+    <string name="enterMobileNumber">Mobile Number</string>
+    <string name="amount">Amount</string>
+    <string name="selectRelianceJIOPlan">Select Plan</string>
+
+
+    <!--DTH Activity-->
+    <string name="dth">DTH Recharge</string>
+    <string name="enter10DigitsCustomerId">Enter  Customer ID Number</string>
+    <string name="customerId">Customer ID</string>
+
+
+    <!--MyOutlets-->
+    <string name="myOutlets">My Outlets</string>
+    <string name="mapChange">Do You want to change Map </string>
+
+    <!--UploadImage Activity-->
+    <string name="uploadImage">Upload Image</string>
+    <string name="drawer_item_mahavitran">Mahavitran</string>
+
+    <!--Mahavitran-->
+
+    <string name="mahavitran">Mahavitran</string>
+    <string name="billingUnit">Billing Unit</string>
+    <string name="enterBillUnits">Enter Billing Unit Number</string>
+    <string name="consumerNumber">Consumer Number</string>
+    <string name="enter12DigitsConsumerNumber">Enter 12 Digits Consumer Number</string>
+    <string name="onlineBillInfo">MSEDCL Online Bill Payment</string>
+    <string name="consumerName">Consumer Name</string>
+
+    <string name="billMonth">Bill Month</string>
+    <string name="billNumber">Bill Number</string>
+    <string name="billPeriod">Bill Period</string>
+    <string name="billDate">Bill Date</string>
+    <string name="incentiveDate">Incentive Date</string>
+    <string name="dueDate">Due Date</string>
+    <string name="disconnTag">Disconn Tag</string>
+    <string name="PC">PC</string>
+    <string name="DTCCode">DTC Code</string>
+    <string name="billAmount">Bill Amount</string>
+    <string name="incentiveAmount">Incentive Amount</string>
+    <string name="amountAfterDueDate">Amount after due Date</string>
+    <string name="back">Back</string>
+    <string name="billAlreadyPaid">This bill has already been paid.</string>
+    <string name="noBillFound">No Bill found for this billing unit and consumer number. Kindly check the billing unit and consumer number.</string>
+    <string name="payBill">Pay \u20B9</string>
+    <string name="transcationSuccessfull">Your Transaction has been Successful.</string>
+    <string name="errorSendingMail">Services from Email Server unavailable. Please try after some time.</string>
+    <string name="transcationprogress">we are processing your transaction request...</string>
+    <string name="fetchingBalance">Fetching Balance...</string>
+    <string name="mpinSet">Mpin Set...</string>
+    <string name="verifiedOTP">Verifying OTP...</string>
+    <string name="cycerplatServicedown">Service from CyberPlat unavailable, Please try after Sometime.</string>
+
+
+    <!--Myoultes Activity  - Fetch Address-->
+    <string name="no_geocoder_available">No geocoder available</string>
+
+    <string name="fetch_address">Fetch address</string>
+
+    <string name="address_found">Address found</string>
+
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+    <string name="AccountStatement">My Wallet Statement</string>
+    <string name="enterfromdate">Select from Date.</string>
+    <string name="entertodate">Select To Date.</string>
+    <string name="accountStmt">Fetching Details...</string>
+    <string name="recyclerviewdataEmpety">No Records found.</string>
+    <string name="myRechargeHistroy">My Recharge History</string>
+    <string name="selectproperdate">Select Proper Date.</string>
+
+    <string name="Warning">Warning! Oops, some error encountered. Please try again.</string>
+
+    <string name="go"> Go</string>
+    <string name="MyRechargeHistory">My Recharge History</string>
+    <string name="mpinMsg">Note : Mpin will be used for Login as Password.</string>
+    <string name="resetmpinMsg">Do you want to  reset your Mpin?</string>
+    <string name="myhelpline">My HelpLine</string>
+    <string name="accountdeactive">Your account has been Deactived.</string>
+    <string name="resendOTP">Resend OTP</string>
+    <string name="resendSuccessful">New OTP has been sent to your Email ID and Registered Mobile Number.</string>
+    <string name="checkversion">Loading.</string>
+    <string name="updateApplication">You are using outdated version of Application. Inorder to continue using the application upgrade to the latest version.</string>
+    <string name="helpline">Fetching Help Line Info...</string>
+    <string name="techincalwuery">For any technical query or assistance please call to Technical Support Department.Contact Number-022 67765178 or email to fitsd@vakrangee.in  </string>
+    <string name="MyTransaction">My Transaction</string>
+    <string name="resetMpin">Forgot Mpin</string>
+    <string name="checkvkid">Invalid VKID, please check your VKID.</string>
+    <string name="outlestimeing">MyOutlet Timing</string>
+    <string name="opeingtime">09:00 AM</string>
+    <string name="closingtime">09:00 PM</string>
+    <string name="customerprofile">Customer Profile</string>
+    <string name="aadharinvalid">The aadhaar number must be 12 characters long.</string>
+    <string name="invalidPancard">Invalid Pancard Number.</string>
+    <string name="invalidPincode">Pincode Number Invalid.</string>
+    <string name="MyProflie">MyProfile</string>
+    <string name="service">Services</string>
+    <string name="mykendra">Vakrangee Kendra</string>
+    <string name="mystatement">My VKMS</string>
+    <string name="fieldforce">Field Force Dashboard</string>
+    <string name="MyFieldForce">MyFieldForce</string>
+    <string name="ConsumerNo">Consumer No.</string>
+    <string name="BillingUnitNo">Billing Unit No.</string>
+    <string name="CycleNo">Cycle No.</string>
+    <string name="ElectricityBillPayment">Electricity Bill Payment</string>
+    <string name="PipedGas">Piped Gas Bill Payment</string>
+    <string name="LandlineBillPayment">Landline Bill Payment</string>
+    <string name="PipedGasBillPayment">Piped Gas (PNG) Bill Payment</string>
+    <string name="LandlineBill">Landline Bill Payment</string>
+    <string name="Hindi">हिन्दी</string>
+    <string name="English">English</string>
+    <string name="myvideotraining">Training Video</string>
+    <string name="fetchingtriaingvideo">Fetching Training Video</string>
+
+    <!--<New String-->
+
+    <string name="MyWalletStatement">My Wallet Statement</string>
+    <string name="PleaseSelect">Please Select</string>
+    <string name="Login">Login</string>
+    <string name="PleasverfiyMobile">Please verify and confirm Mobile Number, Service Provider and Recharge Amount.</string>
+    <string name="ServiceProvider">Service Provider</string>
+    <string name="MobileNumber">Mobile Number</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Cancel">Cancel</string>
+
+
+    <string name="PleasverfiyDTH">Please verify and confirm DTH Number, Service Provider and Recharge Amount.</string>
+    <string name="DTHNumber">DTH Number</string>
+    <string name="EnterCharacterVKID">Enter 9 Character VK ID</string>
+    <string name="InvalidEmailMob">Invalid Mobile number.</string>
+    <string name="InvalidEmail">Invalid Email Id</string>
+    <string name="EnterPincode">Enter 6 digit Pin code</string>
+    <string name="EnterMob">Enter 10 digit Mobile No</string>
+    <string name="EnterRemarks">Enter atleast 3 characters in Remarks.</string>
+    <string name="EnterDigitspassword">Enter 6 Digits Password</string>
+    <string name="LastTransactions">Last 10 Transactions</string>
+    <string name="MyAccountStatement">My Account Statement</string>
+    <string name="SignOut">Sign Out</string>
+    <string name="LogoutyourAccount">Logout your Account</string>
+    <string name="PleaseWait">Please Wait!</string>
+
+
+    <string name="technicalsupport">Technical Support</string>
+    <string name="WalletRechargeHistory">Wallet Recharge History</string>
+    <string name="WalletACStatement">Wallet A/C Statement</string>
+    <string name="Transactions">Transactions</string>
+    <string name="FranchiseeProfile">View Franchisee Profile</string>
+    <string name="EmployeeProfileList">Employee Profile List</string>
+    <string name="inwordinfo">Inward Info</string>
+    <string name="store">Store</string>
+    <string name="seller">Seller</string>
+    <string name="status">Status</string>
+    <string name="completed">Completed</string>
+    <string name="newuser">New User</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="notrgister">This device is not registered with us. Kindly register.</string>
+    <string name="primarysim">Your primary Sim is not getting detected.please check. Do you want to Register again?</string>
+    <string name="monitoring_dashboard">Vakrangee ATM Monitor</string>
+    <string name="moredetails"> More Details   </string>
+
+    <!--GWR witness -->
+    <string name="witness1">Witness 1 information is incomplete. Are you sure want to submit Witness 2 information?</string>
+    <string name="witness2">Witness 2 information is incomplete. Are you sure want to submit Witness 1 information?</string>
+    <string name="cameraman1">Cameraman information is incomplete. Are you sure want to submit Cameraman 2 information?</string>
+    <string name="cameraman2">Cameraman 2 information is incomplete. Are you sure want to submit Cameraman 1 information?</string>
+
+    <string-array name="items">
+        <item>All</item>
+        <item>Operation</item>
+        <item>Tech Live</item>
+        <item>Cancelled</item>
+        <item>Testing</item>
+        <item>Work In progress</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">fragement</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="film_genres">Film genres</string>
+    <string-array name="all_atm_list">
+
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Delhi</item>
+        <item>GCR</item>
+        <item>Gujrat</item>
+        <!--Add new position data-->
+
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jharkhand</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>MCR</item>
+        <item>NCR</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+
+
+    </string-array>
+
+    <string-array name="bihar">
+        <item>Patna</item>
+
+    </string-array>
+
+
+    <string-array name="Chandigarh">
+        <item>Raipur</item>
+    </string-array>
+
+    <string-array name="Delhi">
+        <item>North West</item>
+
+    </string-array>
+
+    <string-array name="GCR">
+        <item>Sindhudurg</item>
+        <item>South Goa</item>
+
+    </string-array>
+
+    <string-array name="Gujrat">
+        <item>Gandhinagar</item>
+        <item>Mahesana</item>
+        <item>Surat</item>
+    </string-array>
+
+    <string-array name="haryana">
+        <item>Panchkula</item>
+    </string-array>
+
+    <string-array name="HimachalPradesh">
+        <item>Sirmaur</item>
+    </string-array>
+
+    <string-array name="Jharkhand">
+        <item>Purbi Singhbhum</item>
+        <item>Saraikela-Kharsawan</item>
+        <item>Ranchi</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="movie_title">movie title</string>
+    <string name="action_movies">Action</string>
+    <string name="musical_movies">Musical</string>
+    <string name="drama_movies">Drama</string>
+    <string name="comedy_movies">Comedy</string>
+    <string name="thriller_movies">Thriller</string>
+    <string name="movie_genre">genre</string>
+    <string name="outdoorduty">Outdoor Duty</string>
+    <string name="add">New Outdoor Duty</string>
+    <string name="captureimage">Please Capture Image after upload Image.</string>
+    <string name="myVakrangeeKendra">My Vakrangee Kendra</string>
+    <string name="frontImage">Please at least Capture Front (frontage) Image in your Vakrangee Kendra.</string>
+    <string name="imageuploadsuccessful">Vakrangee Kendra data update successfully.</string>
+    <string name="imageuploadfailed">Vakrangee Kendra data update failed.</string>
+    <string name="vakrangeekendratime">Working Hours</string>
+    <string name="vakrangeekendraimage">Kendra Photo</string>
+    <string name="vakrangeekendralocation">Kendra Location</string>
+    <string name="serviceonlyfranchiess">Sorry. This service is available for franchisee only.</string>
+    <string name="updateTiming">Please wait update my vakrangee kendra data.</string>
+    <string name="odapply">OD apply successfully.</string>
+    <string name="serviceonlyUser">Sorry. This service is available for VL and VA only.</string>
+    <string name="odalradyexist">OD for the time frame provided already exists.</string>
+    <string name="odstarttimeendtime">OD start time should be less than OD end time.</string>
+    <string name="odstartandendtimenotsame">OD start time and end time cannot be same.</string>
+    <string name="odpassaway">You cannot apply for OD after the OD start day has passed.</string>
+    <string name="updateLocation">Please wait updating vakrangee kendra Location details.</string>
+    <string name="updateProfile">Please wait updating vakrangee kendra details.</string>
+    <string name="saveLocation">Please wait saving vakrangee kendra Location details.</string>
+
+
+    <string name="permissionnoallow">Access permission not allow,please goto App-> select-> Vakrangee Kendra app->
+    click on setting-> allow all permission. </string>
+    <string name="myVakrangeeKendraLocationDetails">Vakrangee Kendra Location</string>
+
+    <string name="myAttendance">My Attendance</string>
+    <string name="atmsystem">ATM System</string>
+    <string name="chquenumber">Cheque Number</string>
+    <string name="chquedate">Cheque Date</string>
+    <string name="chqueamount">Cheque Amount</string>
+    <string-array name="my_vakrangeekendra">
+        <item>Please Select</item>
+        <item>Frontage Image</item>
+        <item>Left Wall Image</item>
+        <item>Front Wall Image</item>
+        <item>Right Wall Image</item>
+        <item>Back Wall Image</item>
+        <item>Ceiling Image</item>
+        <item>Floor Image</item>
+        <item>Extra Image 1</item>
+        <item>Extra Image 2</item>
+        <item>Extra Image 3</item>
+    </string-array>
+    <string name="Rs2000">2000 \u20B9</string>
+    <string name="Rs500">500\u20B9</string>
+    <string name="Rs100">100\u20B9</string>
+    <string name="atmrocash">ATM RO Cash Loading</string>
+    <string name="ReatailsRoAcknowledgement">Retail Outlet Cash Acknowledgement added successfully.</string>
+    <string name="title_activity_vakrangee_kendra_layout">Vakrangee Kendra Layout</string>
+    <string name="give_name">Give Name</string>
+    <string name="nameit">Name</string>
+    <string name="textviewit">TextView</string>
+    <string name="title_activity_vakrangee_kendra_layout1">VakrangeeKendraLayout1</string>
+    <string name="profile">Profile</string>
+    <string name="kendra_details">Kendra_Details</string>
+    <string name="nextgen_franchisee_application">NextGen Franchisee Application Form</string>
+
+
+    <string name="Profile">Profile</string>
+    <string name="Kendra_Details">Kendra Details</string>
+
+    <string-array name="PremisesPhotographs">
+        <item>Please Select</item>
+        <item>Frontage Image (5ft Distance)</item>
+        <item>Frontage Image (10ft Distance)</item>
+        <item>Left Wall Image</item>
+        <item>Front Wall Image</item>
+        <item>Right Wall Image</item>
+        <item>Back Wall Image</item>
+        <item>Ceiling Image</item>
+        <item>Floor Image</item>
+        <item>Frontage Opposite Side Road</item>
+        <item>Frontage Road Left Side</item>
+        <item>Frontage Road Right Side</item>
+    </string-array>
+
+    <string-array name="PremisesPhotographsReadinessVerification">
+        <item>Please Select</item>
+        <item>Frontage Image (5ft Distance)</item>
+        <item>Frontage Image (10ft Distance)</item>
+        <item>Left Wall Image</item>
+        <item>Front Wall Image</item>
+        <item>Right Wall Image</item>
+        <item>Back Wall Image</item>
+        <item>Ceiling Image</item>
+        <item>Floor Image</item>
+        <item>Frontage Opposite Side Road</item>
+        <item>Selfie Indoor</item>
+        <item>Selfie Outdoor</item>
+    </string-array>
+
+    <string-array name="PremiseFloor">
+        <item>Please Select</item>
+        <item>Ground Floor</item>
+        <item>1st Floor</item>
+        <item>2nd Floor</item>
+        <item>3rd Floor or above</item>
+    </string-array>
+
+    <string-array name="PremiseStructure">
+        <item>Please Select</item>
+        <item>Concrete/Stone/Bricks (Pakka)</item>
+        <item>Mud (Kacha)</item>
+    </string-array>
+
+    <string-array name="PremiseRoof">
+        <item>Please Select</item>
+        <item>Concrete/Slab</item>
+        <item>Tin Shed</item>
+        <item>Roof Tile</item>
+        <item>Kacha</item>
+        <item>Others</item>
+    </string-array>
+
+    <!-- NextGen Site Visit -->
+    <string name="search"> Search</string>
+    <string name="nextgen_sitevisit">Site Detail</string>
+    <string name="title_search_kendra">Search Kendra</string>
+    <string name="label_franchisee_application_number">VKID / Franchisee Application Number</string>
+    <string name="error_msg_search1">Enter VKID / Franchisee Application Number.</string>
+    <string name="welcome_mail_received">Welcome Mail and Design Manual Received</string>
+    <string name="call_received">Call received from Vakrangee design team</string>
+    <string name="logistics_payment_mode">Logistics Payment Made</string>
+    <string name="logistics_payment_mode_subtitle">(Hardware will be dispatched only if payment is made on or before 20/7/2018)</string>
+    <string name="consent_header">Consent for Vakrangee Business Guidelines</string>
+    <string name="consent_yes">Yes, I agree</string>
+    <string name="consent_no">No, I will Exit</string>
+    <string name="consent_text1_not">Not able to Offer Vakrangee Services exclusively </string>
+    <string name="consent_text2_not">Not able to Maintain sufficient working capital </string>
+    <string name="consent_text3_not">Not able to Make Kendra as per Design Manual </string>
+    <string name="consent_text1">Offer Vakrangee Services exclusively </string>
+    <string name="consent_text2">Maintain sufficient working capital </string>
+    <string name="consent_text3">Make Kendra as per Design Manual </string>
+    <string name="franchisee_note1">For any clarification/assistance regarding application form please call on Toll Free number</string>
+    <string name="franchisee_note2">Police verification is mandatory and should be done by you before signing the agreement.</string>
+    <string name="bank_note1">Bank Account Holder name should be same as Applicant Name.</string>
+    <string name="bank_note2">All the payment should be made from this bank account only.</string>
+    <string name="bank_note3">Vakrangee Commissions will be paid in this bank account only.</string>
+    <string name="gst_header">GSTIN Details </string>
+    <string name="gst_registered">GSTIN Registered :</string>
+    <string name="gst_yes">Yes</string>
+    <string name="gst_no">Not Registered</string>
+    <string name="if_yes_gst_number">If Yes, GSTIN Number : </string>
+    <string name="gst_address">GSTIN Address :</string>
+    <string name="gst_address_subtitle">(as per GSTIN registration certificate)</string>
+    <string name="gst_note">In order to receive input credit, GSTIN Number is Mandatory</string>
+    <string name="hintGstNumber">Enter GSTIN Number</string>
+    <string name="hintTRNNumber">Enter Application Reference Number(ARN)</string>
+    <string name="hintGstAddress">Enter GSTIN Address</string>
+    <string name="hintGsTnumbernotValid">Invalid GSTIN Number</string>
+    <string name="logistics_payment_header">Logistics Payment</string>
+
+    <string name="gstin_certificate_img">GSTIN Certificate Image</string>
+    <string name="gstin_ack_receipt_img">GSTIN Acknowledgement Receipt Image</string>
+    <!-- Profile -->
+    <string name="loading_msg_schedule">Scheduling Site Visit...</string>
+    <string name="alert_msg_welcome_status_unavailable">Please Select Welcome Mail Status.</string>
+    <string name="alert_msg_call_received_unavailable">Please Select Call Received Status.</string>
+    <string name="alert_msg_logistics_unavailable">Please Select Logistics payment made Status.</string>
+    <string name="alert_msg_logistics_payment_date_unavailable">Please Select Logistics payment date.</string>
+    <string name="alert_msg_consent_unavailable">Please Select Consent Status.</string>
+    <string name="alert_msg_gst_unavailable">Please Select If GSTIN Registered or not.</string>
+    <string name="alert_msg_gst_details_unavailable">Please enter GSTIN Details.</string>
+    <string name="alert_msg_gst_number_invalid">Please enter valid GSTIN Number.</string>
+    <string name="alert_msg_i_agree"><b>Please review and verify information provided on each and every tab by clicking on reviewed and verified checkbox on each tab.</b></string>
+
+    <!-- Kendra Location Alert Msg-->
+    <string name="alert_msg_location_unavailable">Please Select Site Location.</string>
+    <string name="alert_msg_location_unavailable2">Unable to get your location. Kindly, check your GPS and retry again.</string>
+    <!-- Kendra Photos Alert Msg-->
+    <string name="alert_msg_frontageimage_unavailable">Please Upload Missing Frontage Image (5ft Distance).</string>
+    <string name="alert_msg_frontageimage10_unavailable">Please Upload Missing Frontage Image (10ft Distance).</string>
+    <string name="alert_msg_leftwallimage_unavailable">Please Upload Missing Left Wall Image.</string>
+    <string name="alert_msg_frontwallimage_unavailable">Please Upload Missing Front Wall Image.</string>
+    <string name="alert_msg_rightwallimage_unavailable">Please Upload Missing Right Wall Image.</string>
+    <string name="alert_msg_backwallimage_unavailable">Please Upload Missing Back Wall Image.</string>
+    <string name="alert_msg_ceilingimage_unavailable">Please Upload Missing Ceiling Image.</string>
+    <string name="alert_msg_floorimage_unavailable">Please Upload Missing Floor Image.</string>
+    <string name="alert_msg_frontageoppositesideroad_unavailable">Please Upload Missing Frontage Opposite Side Road.</string>
+    <string name="alert_msg_frontageroadleftside_unavailable">Please Upload Missing Frontage Road Left Side.</string>
+    <string name="alert_msg_frontageroadrightside_unavailable">Please Upload Missing Frontage Road Right Side.</string>
+    <!-- Site Visit Alert Msg -->
+    <string name="alert_msg_incomplete_premise_detail">Incomplete Premise Detail.</string>
+    <string name="alert_msg_incomplete_premise_area_detail">Area can not be zero.</string>
+    <string name="alert_msg_incomplete_premise_located_at_detail">Incomplete Premise Located At Detail.</string>
+    <string name="alert_msg_incomplete_address_of_location_visited_detail">Incomplete Address Of Location Visited Detail.</string>
+    <string name="alert_msg_incomplete_premise_level_detail">Incomplete Premise Level Detail.</string>
+    <string name="alert_msg_incomplete_premise_shape_detail">Incomplete Premise Shape Detail.</string>
+    <string name="alert_msg_incomplete_closest_bank_branch_detail">Incomplete Closest Bank Branch Detail.</string>
+    <string name="alert_msg_incomplete_closest_atm_detail">Incomplete Closest ATM Detail.</string>
+    <string name="alert_msg_layout_sketch">Please upload layout sketch.</string>
+    <string name="alert_msg_incomplete_provisional_main_signborad">Incomplete Provisional Main Signboard.</string>
+
+    <!-- Login: Copyrights, Term of Use and Privacy Policy -->
+    <string name="text_copyright_message">Copyright \u00a9 2018  <u><a href="http://www.vakrangee.in">Vakrangee Limited</a></u>. All Rights Reserved.</string>
+    <string name="link_term_of_use"><u><a href="http://www.vakrangee.in/terms-of-use.php">Terms of Use</a></u></string>
+    <string name="link_privacy_policy"><u><a href="http://www.vakrangee.in/privacy-policy.php">Privacy Policy</a></u></string>
+    <string name="url_vakrangee_limited">http://www.vakrangee.in</string>
+    <string name="url_term_of_user">http://www.vakrangee.in/terms-of-use.php</string>
+    <string name="url_privay_policy">http://www.vakrangee.in/privacy-policy.php</string>
+
+    <!-- Support Ticket -->
+    <string name="name_support_ticket">Support Ticket</string>
+    <string name="lblSelectCategory">Select Category</string>
+    <string name="lblSelectSubCategory">Select Sub Category</string>
+    <string name="lblSelectIssueType">Select Issue Type</string>
+    <string name="lblDescription">Description</string>
+    <string name="hintDescription">Issue Description</string>
+    <string name="lblAttachment">Attachment</string>
+    <string name="selectCategory">Please select Category.</string>
+    <string name="selectSubCategory">Please select SubCategory.</string>
+    <string name="selectIssueType">Please select Issue Type.</string>
+    <string name="pleaseSelect">Please Select</string>
+    <string name="enterDescription">Please enter Description.</string>
+    <string name="file_already_exist">Selected file already exist.</string>
+
+    <!-- Permissions  -->
+    <string name="settings_txt">Settings</string>
+    <string name="need_permission_lbl">Need Permissions</string>
+    <string name="needs_permission_msg">This app needs Phone, Storage and Location permission. You can grant them in app settings.</string>
+    <string name="needs_permission_storage_msg">This app needs Storage permission. You can grant it in app settings.</string>
+    <string name="needs_permission_camera_msg">This app needs Camera permission. You can grant it in app settings.</string>
+    <string name="needs_permission_phone_state_msg">This app needs Phone permission. You can grant it in app settings.</string>
+
+    <!-- NextGen Site Commencement -->
+    <string name="nextgen_sitereadiness">NextGen Site Readiness</string>
+    <string name="nextgen_sitecommencement">NextGen Site Commencement</string>
+    <string name="titleSiteWorkCommencement">Work Commencement</string>
+    <string name="titleSiteReadiness">Site Readiness</string>
+    <string name="alert_msg_work_commencement_photo">Please On Work Commencement Photo\'s.</string>
+    <string name="alert_msg_work_start_date_unavailable">Please Select Work Start Date.</string>
+    <string name="alert_msg_work_end_date_unavailable">Please Select Work Completion Date.</string>
+    <string name="alert_msg_work_start_date_unavailable1">Please Select Start Date.</string>
+    <string name="alert_msg_work_end_date_unavailable1">Please Select Completion Date.</string>
+    <string name="alert_msg_work_date_validation">Start date can not be greater than Completion Date.</string>
+    <string name="alert_msg_work_commencement_fail">Failed to submit site work commencement information. Please try again.</string>
+    <string name="alert_msg_work_commencement_success">Site work commencement information submitted successfully.</string>
+    <string name="alert_clear_confirmation_msg">Are you sure you want to clear?</string>
+    <string name="alert_submit_confirmation_msg">Are you sure you want to submit?</string>
+    <string name="alert_reviewed_confirmation_msg">You have to review and confirm information provided. Do you want to proceed to review and confirm ?</string>
+
+
+    <!-- NextGen Work In Progress -->
+    <string name="max_images_msg">You have already added {MAXCOUNT} images.</string>
+    <string name="alert_msg_work_in_progress_success">Site Work in Progress information submitted successfully.</string>
+    <string name="alert_msg_readiness_verification_success">Site Readiness and Verification submitted successfully.</string>
+    <string name="alert_msg_readiness_verification_fail">Failed to submit site Readiness and Verification information. Please try again.</string>
+    <string name="alert_msg_work_in_progress_fail">Failed to submit site work in progress information. Please try again.</string>
+    <string name="alert_msg_please_select_completed">Please check completed, if you want to add photo.</string>
+    <string name="alert_msg_please_select_verified_rejected">Please select Verified or Rejected option, if you want to add photo.</string>
+    <string name="nextgen_work_in_progress">NextGen Work In Progress</string>
+    <string name="nextgen_work_in_progress_status">Work In Progress Status</string>
+    <string name="lblRemarks">Remarks</string>
+    <string name="lbl_VL_Remarks">VL Remarks</string>
+    <string name="hintRemarks">Enter Remarks</string>
+    <string name="wip_images">WIP Images</string>
+    <string name="enterRemarks">Please enter Remarks.</string>
+    <string name="estimated_completion_date">Expected Completion Date</string>
+    <string name="expected_identification_date">Expected Date Identification</string>
+    <string name="completion_date">Completion Date</string>
+    <string name="label_site_commencement">Site Commencement:</string>
+    <string name="label_work_commencement">Work Commencement Photos</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="add_attachments">Add Attachments</string>
+    <string name="choose_file">Choose File</string>
+    <string name="start_date">Start Date</string>
+    <string name="visit_date">Visit Date</string>
+    <string name="last_visit">Last Status Update On</string>
+    <string name="expected_date">Expected Date Of Completion</string>
+    <string name="work_status_type">Work Status Type</string>
+    <string name="image_type">Item Category</string>
+    <string name="work_on_track">Work On Track</string>
+    <string name="image_details">Image Details</string>
+    <string name="add_txt">Add</string>
+    <string name="no_data_to_display_text">No Data to Display</string>
+    <string name="please_wait">Please wait</string>
+    <string name="not_valid_location">You are not within the range of kendra.</string>
+    <string name="unscheduled">UnScheduled</string>
+    <string name="address_update">Address update successfully.</string>
+    <string name="profile_update">Site Readiness and Verfication data updated successfully.</string>
+    <string name="poor_internet_text">Poor Connection. You may not get proper result/s. You may have to try again.</string>
+    <string name="close_text">Close</string>
+
+    <!-- Titles  -->
+    <string name="title_kendra_workingtime">Kendra Working Time</string>
+
+    <!-- Site Readiness and Verification  -->
+    <string name="site_readiness_verification">Site Readiness and Verification</string>
+    <string name="next_gen_franchisee_application_form">NextGen Franchisee Application</string>
+    <string name="gwr">Guinness Activity</string>
+    <string name="next_gen_kendra_acknowledgement">NextGen Kendra Acknowledgement</string>
+    <string name="my_equipment_acknowledgement">My Equipment Acknowledgement</string>
+    <string name="franchisee_enquiry_details">Franchisee Enquiry Details</string>
+    <string name="interior">Interior</string>
+    <string name="branding">Branding</string>
+    <string name="draw_sketch">Draw Sketch</string>
+    <string name="kendra_photo">Kendra Photo</string>
+    <string name="kendra_final_photo">Kendra Final Photo</string>
+    <string name="hintEnterQuantity">Enter Quantity</string>
+    <string name="no_image_captured">Please capture photo, if it is completed.</string>
+    <string name="msg_location_beyond_range">You are not within the range of Kendra. Or, You have adjusted the vakrangee kendra location beyond the permissable limit of {KENDRA_RANGE}m from current location.</string>
+    <string name="msg_improper_location_accuracy">Your Device GPS signal strength is not good. To update kendra location be in front of kendra under an open sky.(In front of Door)</string>
+    <string name="msg_improper_address">Your selected location on map doesn\'t match with available kendra address: {ADDRESS}. Kindly, choose correct location or update your kendra address.</string>
+
+    <!-- Font awesome  -->
+    <string name="fa_drag_drop" translatable="false">&#xf0a6;</string>
+    <string name="fa_filter" translatable="false">&amp;#f0b0;</string>
+    <string name="fa_plus" translatable="false">&amp;#f067;</string>
+    <string name="fa_up_arrow" translatable="false">&#xf106;</string>
+    <string name="fa_call" translatable="false">&#xf095;</string>
+    <string name="fa_mail" translatable="false">&#xf0e0;</string>
+    <string name="fa_down_arrow_drak" translatable="false">&#xf078;</string>
+    <string name="fa_down_arrow" translatable="false">&#xf107;</string>
+    <string name="fa_msg" translatable="false">&#xf27a;</string>
+    <string name="fa_circle_check" translatable="false">&#xf058;</string>
+    <string name="fa_circle_cross" translatable="false">&#xf057;</string>
+    <string name="fa_circle_question" translatable="false">&#xf059;</string>
+    <string name="fa_check" translatable="false">&#xf00c;</string>
+    <string name="fa_warning" translatable="false">&#xf06a;</string>
+    <string name="please_add_images">Please add atleast 1 image.</string>
+    <string name="please_add_images_max_10">Please add images.(Max. 10)</string>
+    <string name="landscape_mode_allowed">Capture Image only landscape mode</string>
+    <string name="click_here_to_preview_commencement_photos"><u>Click here</u> to preview commencement photos.     </string>
+    <string name="select_start_date">Select Start Date.</string>
+    <string name="select_expected_date">Select Expected Date.</string>
+    <string name="select_visit_date">Select Visit Date.</string>
+    <string name="no_txt">No</string>
+    <string name="yes_txt">Yes</string>
+    <string name="nextgen_current_status">Current Status</string>
+    <string name="nextgen_site_no_status_available">No Status Available</string>
+    <string name="lbl_correction_list">WIP Image/s Remarks :</string>
+    <string name="nextgen_commencement_default_current_status">Work not commenced yet.</string>
+    <string name="nextgen_visit_default_current_status">Site not visited yet.</string>
+
+    <!-- Element  -->
+    <string name="lbl_element_name">Main Sign Board Frame</string>
+    <string name="lbl_size">Size</string>
+    <string name="lbl_qty">Qty</string>
+    <string name="lbl_stat">Status</string>
+    <string name="ok_txt">Ok</string>
+    <string name="not_ok_txt">Not Ok</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="not_visited_yet">Not Visited Yet</string>
+    <string name="warning_lbl">Warning: Click here</string>
+
+    <!-- Work Completion -->
+    <string name="titleSiteWorkCompletion">Completion Intimation</string>
+    <string name="label_work_completion_intimation">Work Completion Intimation</string>
+    <string name="label_work_completion_photos">Work Completion Photo\'s</string>
+    <string name="label_work_completion_date">Work Completion Date</string>
+    <string name="alert_msg_work_completion_success">Work completion intimation information submitted successfully.</string>
+    <string name="alert_msg_work_completion_fail">Failed to submit work completion intimation information. Please try again.</string>
+    <string name="done_txt">Done</string>
+    <string name="not_done_txt">Not Done</string>
+    <string name="alert_msg_work_completion_date_unavailable">Please Select Work Completion Date.</string>
+    <string name="Logistics_payment_date">Logistics Payment Date</string>
+    <string name="hint_site_layout_sketch"><b>IMP Note:</b> Please upload layout map (Naksha) drawn on plain white paper with pen/pencil mentioning Width - Depth - Entrance dimensions (Length and Width).</string>
+    <string name="reviewed_and_verified">Reviewed and Verified.</string>
+    <string name="update">Update</string>
+
+    <!-- NextGen Application Form -->
+    <string name="vakrangee_kendra_type">Vakrangee Kendra Type</string>
+    <string name="iocl">IOCL(Indian Oil Corporation Limited)</string>
+    <string name="non_iocl">Non - IOCL / Non - Nayara</string>
+    <string name="entity_type">Entity Type</string>
+    <string name="referred_by">Referred By</string>
+    <string name="choose_photo">Choose Photo</string>
+
+    <!--GSTIN Image-->
+    <string name="Gstin_Success">GSTIN Information submitted successfully.</string>
+    <string name="location_not_match">Your provided location doesn\'t match with available kendra address. Kindly, update your kendra address.</string>
+    <string name="notrainingvideo">Sorry, No Training Video/s Available.</string>
+    <string name="file_size_msg">Please select file with Size less than 1 MB</string>
+    <string name="txt_good_conditions_note">Note: Please enter missing item detail below into remarks section.</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="file_size_1mb">JPG/PDF File Size less than 1 MB</string>
+    <string name="lbl_current_address">Current</string>
+    <string name="lbl_permanent_address">Permanent</string>
+    <string name="work_start_date">Work Start Date</string>
+
+    <!--dispatch agreement-->
+    <string name="agreement_dispatch">Agreement Dispatch</string>
+
+    <string name="tracking_hardware">Tracking Hardware</string>
+    <string name="bca_detail_entry">BCA Detail Entry</string>
+    <string name="kendra_verification_updation">Kendra Location Updation</string>
+
+    <!--ATM Loading-->
+    <string name="atm_loading">ATM Loading</string>
+
+    <!--Delivery address-->
+    <string name="delivery_address">H/W Kit Delivery Address</string>
+    <string name="delivery_address_save">Delivery address detail save successfully.</string>
+    <string name="delivery_address_submit">Are you sure want to submit delivery address detail?</string>
+
+    <!--paymemt history-->
+    <string name="payment_history">Payment History</string>
+
+
+    <!-- sim card details-->
+    <string name="simcardDetails">ATM SIM Card Details</string>
+    <string name="simcardDetails_saveData">ATM SIM Card data save successfully</string>
+    <string name="simcardDetails_note">Note: Kindly, scan avalible QR code on back side of SIM jacket/cover.</string>
+    <string name="fa_qrcode" translatable="false">&#xf029;</string>
+</resources>

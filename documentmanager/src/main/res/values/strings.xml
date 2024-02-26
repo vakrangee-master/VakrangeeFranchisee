@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">DocumentManager</string>
+
+    <!-- Document Manager -->
+    <string name="delete_text">Delete</string>
+    <string name="failed_pdf">Failed to create PDF.</string>
+    <string name="file_not_exist">File not exists.</string>
+    <string name="agreement_updated_successful">Agreement Details updated successfully.</string>
+    <string name="msme_updated_successful">MSME Certificate Details saved successfully.</string>
+    <string name="shop_updated_successful">Shop Establishment Certificate Details saved successfully.</string>
+    <string name="qualification_updated_successful">Qualification Details saved successfully.</string>
+    <string name="address_updated_successful">Address Details saved successfully.</string>
+    <string name="docs_updated_successful"> Document details updated successfully.</string>
+    <string name="scan_agreement_text">Scan Agreement</string>
+    <string name="browse_text">Browse File</string>
+    <string name="select_all_text">Select All</string>
+    <string name="capture_msg">Click on Capture to Scan images.</string>
+    <string name="agreement_back_msg">Do you want to save Agreement Images?</string>
+    <string name="delete_agreement_msg">Are you sure you want to delete all Agreement Images?</string>
+    <string name="no_agreement_to_delete_msg">No Agreement uploaded to delete.</string>
+    <string name="agreement_failed_to_delete_msg">Agreement Images failed to delete.</string>
+    <string name="agreement_delete_success_msg"> Agreement Images deleted successfully.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="iibf_data_updated_successful">IIBF Certification Data Upload successfully.</string>
+
+</resources>

@@ -1,0 +1,194 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@color/colorPrimary"
+    card_view:cardBackgroundColor="@color/md_light_statusbar"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="15dp"
+    card_view:contentPadding="5dp"
+    card_view:layout_collapseMode="pin">
+
+
+    <LinearLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/md_light_statusbar"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtVANamepop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:text=" Nilesh Dhola - VL0003167"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/txtApplyDatepop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:text=" Apply Date: 04-03-017"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVAStartDatepop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="Start Date: 03-01-2017"
+            android:textColor="@android:color/white" />
+
+
+        <TextView
+            android:id="@+id/txtVAEndDatepop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="End Date: 05-03-2017"
+            android:textColor="@android:color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/txtVAnumberOfDaypop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l1"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.5"
+                android:gravity="start"
+                android:text="Number of day: 03"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/txtStatuspop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+
+                android:text="Status: Pending"
+
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVAReasonpop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="Reason: perosal Reson"
+            android:textColor="@android:color/white" />
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/radioButtonApproved"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:buttonTint="@color/white"
+
+                android:text="Approved"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButton2Reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.13"
+                android:buttonTint="@color/white"
+                android:checked="false"
+                android:text="Reject"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOnhold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:buttonTint="@color/white"
+                android:checked="false"
+                android:text="On Hold"
+                android:textColor="@color/white" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/l4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btnpopcancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Cancel"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnpopsubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

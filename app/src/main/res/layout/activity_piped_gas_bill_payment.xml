@@ -1,0 +1,225 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/MyDrawerArrowToggle" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+
+            <TextView
+                android:id="@+id/mobilerecharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/PipedGasBillPayment"
+                android:textColor="@color/gray"
+
+                android:textSize="30dp" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+
+                android:background="#c0c0c0" />
+
+            <TextView
+                android:id="@+id/getBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="end"
+                android:text=""
+                android:textColor="@color/gray"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/getResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text=""
+                android:textSize="14dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="start"
+
+                    android:text="@string/selectServiceProvider"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/mserviceprovider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:dropDownWidth="match_parent"
+                    android:paddingBottom="5dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/gray" />
+
+
+                <EditText
+
+                    android:id="@+id/edtPipGasConsumerNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittext_bottom_bg"
+
+
+                    android:drawablePadding="12dp"
+                    android:gravity="top"
+
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="#2d2d2d"
+                    android:textColorHint="#cccccc"
+
+                    android:drawableStart="@drawable/mobileic"
+                    android:hint="@string/ConsumerNo"
+                    >
+
+
+                </EditText>
+
+                <EditText
+
+                    android:id="@+id/edtPipGasBillingUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@drawable/money"
+                    android:gravity="top"
+                    android:hint="@string/BillingUnitNo"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#cccccc">
+
+
+                </EditText>
+                <EditText
+
+                    android:id="@+id/edtPipGasCycleNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawablePadding="12dp"
+                    android:drawableStart="@drawable/money"
+                    android:gravity="top"
+                    android:hint="@string/CycleNo"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:textColorHint="#cccccc">
+
+
+                </EditText>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:paddingTop="10dp"
+
+                android:orientation="horizontal"
+                android:weightSum="1.5">
+
+                <Button
+                    android:id="@+id/btnPipedGasCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/buttonroundclear"
+                    android:textAllCaps="false"
+                    android:gravity="center_vertical|center_horizontal|left"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+
+                <Button
+
+                    android:id="@+id/btnPipedGasClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/buttonroundedcancel"
+                    android:textAllCaps="false"
+                    android:gravity="center_vertical|center_horizontal|left"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnPipedGasSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.5"
+                    android:textAllCaps="false"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center_vertical|center_horizontal|left"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>

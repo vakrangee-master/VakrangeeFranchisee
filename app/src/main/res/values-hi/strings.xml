@@ -1,0 +1,378 @@
+<resources>
+    <!--<string name="app_Version">1.0.0.3</string>-->
+    <string name="app_name">वकरंगी केन्द्र</string>
+    <string name="description">v_kendra</string>
+    <string name="title_activity_dashboard">वकरंगी केन्द्र</string>
+
+    <string name="drawer_item_home">घर</string>
+
+
+    <string name="drawer_item_mytranscation">मेरे लेन-देन</string>
+    <string name="drawer_item_mobilerecharge">मोबाइल रिचार्ज</string>
+    <string name="drawer_item_dthrecharge">डीटीएच रिचार्ज</string>
+
+
+    <!-- Sample menu -->
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="rs">वर्तमान बटुआ संतुलन उपलब्ध \u20B9 : </string>
+    <!-- Drawer Items -->
+    <string name="title_activity_update_geo_coordinates">नक्शा</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">हैलो</string>
+
+    <string name="clear">स्पष्ट</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="mobilerechargeicon">&#xf10b;</string>
+    <string name="dthrechargeicon">&#xf26c;</string>
+
+
+    <!--Registerpage Actitivty-->
+    <string name="cancel">रद्द करना</string>
+
+    <string name="submit"> जमा करें</string>
+
+    <string name="signIn">साइन इन करें</string>
+    <!--<string name="internetCheck">No Internet Connection, You dont have internet connection</string>-->
+    <string name="internetCheck">क्षमा करें, कोई इंटरनेट कनेक्टिविटी का पता चला। जोड़ने और फिर कोशिश करें।</string>
+    <string name="insertSimcard">कोई सिम कार्ड का पता चला.</string>
+    <string name="alreadyRegistered">पंजीकरण के विवरण पहले से मौजूद है , तो आप इस डिवाइस से जारी है और आगे बढ़ना चाहते हैं.</string>
+    <string name="invalidData">अमान्य डेटा दर्ज किया , कृपया सभी जानकारी की पुष्टि.</string>
+
+
+    <string name="register">रजिस्टर</string>
+    <string name="VKID">VKID</string>
+    <string name="name">नाम</string>
+    <string name="registeredMobileNumber">पंजीकृत मोबाइल नंबर</string>
+    <string name="EmailId">वकरंगी सरकारी ईमेल आईडी</string>
+    <string name="VKMSPassword">VKMS पासवर्ड</string>
+    <string name="unableToConnectVkms">कनेक्ट करने के लिए VKMS सर्वर कृपया प्रयास करें फिर असमर्थ</string>
+    <string name="usernameNotMatch">अमान्य VKID या पासवर्ड.</string>
+    <string name="enter9DigitsVKID">9 चरित्र दर्ज VKID </string>
+    <string name="invalidPassword">पास वर्ड दर्ज करें</string>
+    <string name="pleaseWait">कृपया प्रतीक्षा करें!</string>
+    <string name="authenicationUsernamePassword">"प्रमाणीकरण VKID और पासवर्ड ..."</string>
+    <string name="enter4CharacterName">दर्ज न्यूनतम 4 चरित्र का नाम </string>
+    <string name="enter10DigitesNumber">दर्ज 10 अंक संख्या </string>
+    <string name="invalidEmail">अमान्य ईमेल पता</string>
+    <string name="enter6CharacterPassword">8-20 चरित्र पासवर्ड दर्ज</string>
+
+    <string name="enterMpin">दर्ज 6 अंक संख्या </string>
+    <!--OTP Actitvity-->
+    <string name="verifyOTP">ओटीपी सत्यापित करें</string>
+    <string name="OTPVerification">ओटीपी सत्यापन</string>
+    <string name="OTP">ओटीपी</string>
+    <string name="invalidOTP">अमान्य ओटीपी फिर से कोशिश करें</string>
+    <string name="enterOTP">ओटीपी दर्ज</string>
+    <string name="enterOTP8character">8 चरित्र ओटीपी दर्ज</string>
+
+    <!--RegisterPasswor Mpin set-->
+    <string name="setMpin">MPIN सेट करें</string>
+    <string name="password">Mpin</string>
+    <string name="confrimPassword">MPIN की पुष्टि</string>
+    <string name="passwordNotMatch">पासवर्ड नही मिल रहा</string>
+    <string name="passwordVerify">MPIN सेट</string>
+
+    <!--<string name="congratulations">Congratulation!!Registration has been done successfully.Please login to continue.</string>-->
+    <string name="congratulations">बधाई हो !! MPIN सेट जारी रखने के लिए successfully.Please लॉग इन किया गया है.</string>
+
+    <!--Login Actitivity-->
+    <string name="forgotMpin">MPIN भूल</string>
+
+
+    <!--MobileRecharge Activity-->
+    <string name="mimnimum2DigitsNumber">न्यूनतम 2 अंक राशि नंबर</string>
+    <string name="selectServiceProvider">सेवा प्रदाता का चयन</string>
+    <string name="mobileRecharge">मोबाइल रिचार्ज</string>
+    <string name="enterMobileNumber">मोबाइल नंबर</string>
+    <string name="amount">रकम</string>
+
+    <!--DTH Activity-->
+    <string name="dth">डीटीएच रिचार्ज</string>
+    <string name="enter10DigitsCustomerId">Enter  Customer ID Number</string>
+    <string name="customerId">Customer ID</string>
+
+
+    <!--MyOutlets-->
+    <string name="myOutlets">मेरे आउटलेट</string>
+    <string name="mapChange">आप मानचित्र को बदलना चाहते हैं </string>
+
+    <!--UploadImage Activity-->
+    <string name="uploadImage">तस्वीर डालिये</string>
+    <string name="drawer_item_mahavitran">Mahavitran</string>
+
+    <!--Mahavitran-->
+
+    <string name="mahavitran">महावितरण</string>
+    <string name="billingUnit">बिलिंग यूनिट</string>
+    <string name="enterBillUnits">बिलिंग इकाई संख्या दर्ज</string>
+    <string name="consumerNumber">उपभोक्ता संख्या</string>
+    <string name="enter12DigitsConsumerNumber">दर्ज 12 अंक उपभोक्ता संख्या</string>
+    <string name="onlineBillInfo">एमएसईडीसीएल ऑनलाइन बिल भुगतान</string>
+    <string name="consumerName">उपभोक्ता का नाम</string>
+
+    <string name="billMonth">बिल महीने</string>
+    <string name="billNumber">बिल संख्या</string>
+    <string name="billPeriod">विधेयक अवधि</string>
+    <string name="billDate">बिल की तिथि</string>
+    <string name="incentiveDate">प्रोत्साहन की तारीख</string>
+    <string name="dueDate">नियत तारीख</string>
+    <string name="disconnTag">Disconn टैग</string>
+    <string name="PC">पीसी</string>
+    <string name="DTCCode">डीटीसी संहिता</string>
+    <string name="billAmount">बिल राशि</string>
+    <string name="incentiveAmount">प्रोत्साहन राशि</string>
+    <string name="amountAfterDueDate">निर्धारित तिथि के बाद राशि</string>
+    <string name="back">वापस</string>
+    <string name="billAlreadyPaid">यह विधेयक पहले से ही भुगतान किया गया है।</string>
+    <string name="noBillFound">कोई विधेयक इस बिलिंग इकाई और उपभोक्ता संख्या के लिए मिल गया। कृपया बिलिंग इकाई और उपभोक्ता संख्या की जाँच.</string>
+    <string name="payBill">वेतन \u20B9</string>
+    <string name="transcationSuccessfull">आपके लेन-देन सफल रहा है.</string>
+    <string name="errorSendingMail">ईमेल सर्वर अनुपलब्ध से सेवाएं। कृपया कुछ देर बाद प्रयास करें.</string>
+    <string name="transcationprogress">हम अपने लेनदेन अनुरोध संसाधित कर रहे हैं ...</string>
+    <string name="fetchingBalance">ला रहा है संतुलन ...</string>
+    <string name="mpinSet">MPIN सेट...</string>
+    <string name="verifiedOTP">ओटीपी का सत्यापन ..</string>
+    <string name="cycerplatServicedown">CyberPlat अनुपलब्ध से सेवा , कुछ समय के बाद से कोशिश करें.</string>
+
+
+    <!--Myoultes Activity  - Fetch Address-->
+    <string name="no_geocoder_available">कोई जियोकोडर उपलब्ध</string>
+
+    <string name="fetch_address">पता लायें</string>
+
+    <string name="address_found">पता पाया</string>
+
+    <string name="no_address_found">क्षमा करें, कोई पता मिल गया</string>
+    <string name="no_location_data_provided">बशर्ते कोई स्थान डेटा</string>
+    <string name="service_not_available">क्षमा करें, सेवा उपलब्ध नहीं है</string>
+    <string name="invalid_lat_long_used">अवैध अक्षांश देशांतर या इस्तेमाल किया</string>
+    <string name="AccountStatement">मेरा बटुआ वक्तव्य</string>
+    <string name="enterfromdate">दिनांक से चयन करें.</string>
+    <string name="entertodate">तिथि करने के लिए चयन करें.</string>
+    <string name="accountStmt">ला रहा है विवरण...</string>
+    <string name="recyclerviewdataEmpety">कोई रिकॉर्ड नहीं मिला।</string>
+    <string name="myRechargeHistroy">मेरे रिचार्ज इतिहास</string>
+    <string name="selectproperdate">उचित तिथि का चयन करें.</string>
+
+    <string name="Warning">चेतावनी! ओह, कुछ त्रुटि का सामना करना पड़ा । कृपया पुन: प्रयास करें।</string>
+
+    <string name="go">चले जाओ</string>
+    <string name="MyRechargeHistory">मेरे रिचार्ज इतिहास</string>
+    <string name="mpinMsg">नोट: MPIN पासवर्ड के रूप में लॉग इन करने के लिए इस्तेमाल किया जाएगा.</string>
+    <string name="resetmpinMsg">आप रीसेट MPIN जारी रखना चाहते हैं ।</string>
+    <string name="myhelpline">मेरे हेल्पलाइन</string>
+    <string name="accountdeactive">आपका खाता अक्षम किया गया है ।</string>
+    <string name="resendOTP">पुन: भेजें ओटीपी</string>
+    <string name="resendSuccessful">न्यू ओटीपी अपना ईमेल आईडी और मोबाइल नंबर पंजीकृत करने के लिए भेज दिया गया है </string>
+    <string name="checkversion">लोड हो रहा है.</string>
+    <string name="updateApplication">आप VKMS आवेदन की तारीख संस्करण से बाहर का उपयोग कर रहे हैं। कृपया नवीनतम संस्करण में नवीनीकृत.</string>
+    <string name="helpline">ला रहा हेल्पलाइन जानकारी ...</string>
+    <string name="techincalwuery">किसी भी तकनीकी प्रश्न या सहायता के लिए तकनीकी सहायता Department.Contact करने के लिए फोन कृपया संख्या - 022 67765178 या ईमेल fitsd@vakrangee.in करने के लिए  </string>
+    <string name="MyTransaction">मेरे लेन-देन</string>
+    <string name="resetMpin">MPIN रीसेट ...</string>
+    <string name="checkvkid">अमान्य VKID , अपने VKID देखें।</string>
+    <string name="outlestimeing">MyOutlet समय</string>
+    <string name="opeingtime">09:00 AM</string>
+    <string name="closingtime">09:00 PM</string>
+    <string name="customerprofile">ग्राहक रुपरेखा</string>
+    <string name="aadharinvalid">आधार संख्या 12 वर्ण लंबा होना चाहिए.</string>
+    <string name="invalidPancard">अमान्य Pancard संख्या।</string>
+    <string name="invalidPincode">पिनकोड संख्या अमान्य.</string>
+    <string name="MyProflie">मेरी प्रोफाइल</string>
+    <string name="service">सेवा</string>
+    <string name="mykendra">वकरंगी केन्द्र</string>
+    <string name="mystatement">मेरे VKMS</string>
+    <string name="fieldforce">क्षेत्र बल डैशबोर्ड</string>
+    <string name="MyFieldForce">MyFieldForce</string>
+    <string name="ConsumerNo">उपभोक्ता संख्या.</string>
+    <string name="BillingUnitNo">बिलिंग इकाई संख्या.</string>
+    <string name="CycleNo">चक्र संख्या.</string>
+    <string name="ElectricityBillPayment">बिजली बिल भुगतान</string>
+    <string name="PipedGas">पाइप्ड गैस बिल भुगतान</string>
+    <string name="LandlineBillPayment">लैंडलाइन बिल भुगतान</string>
+    <string name="PipedGasBillPayment">पाइप्ड गैस ( पीएनजी) बिल भुगतान</string>
+    <string name="LandlineBill">लैंडलाइन बिल भुगतान</string>
+    <string name="Hindi">हिन्दी</string>
+    <string name="English">English</string>
+
+    <!--<New String-->
+    <string name="MyWalletStatement">मेरा बटुआ वक्तव्य</string>
+    <string name="PleaseSelect">कृपया चुने</string>
+    <string name="Login">लॉग इन करें</string>
+
+
+    <string name="PleasverfiyMobile">सत्यापित करने और इस बात की पुष्टि मोबाइल नंबर , सेवा प्रदाता और पुनर्भरण राशि कृपया.</string>
+    <string name="ServiceProvider">सेवा प्रदाता</string>
+    <string name="MobileNumber">मोबाइल नंबर</string>
+    <string name="Confirm">पुष्टि करें</string>
+    <string name="Cancel">रद्द करना</string>
+
+
+    <string name="PleasverfiyDTH">कृपया , सत्यापित पुष्टि करें और डीटीएच संख्या , सेवा प्रदाता और पुनर्भरण राशि ।</string>
+    <string name="DTHNumber">डीटीएच संख्या</string>
+
+    <string name="EnterCharacterVKID">9 चरित्र दर्ज VKID</string>
+    <string name="EnterDigitspassword">6 अंक पासवर्ड दर्ज</string>
+    <string name="LastTransactions">पिछले 10 लेनदेन</string>
+    <string name="MyAccountStatement">मेरा खाता वक्तव्य</string>
+    <string name="SignOut">साइन आउट</string>
+    <string name="LogoutyourAccount">अपने खाता लॉगआउट</string>
+    <string name="PleaseWait">कृपया प्रतीक्षा करें!</string>
+
+
+    <string name="technicalsupport">Technical Support</string>
+    <string name="WalletRechargeHistory">Wallet Recharge History</string>
+    <string name="WalletACStatement">Wallet A/C Statement</string>
+    <string name="Transactions">Transactions</string>
+    <string name="FranchiseeProfile">View Franchisee Profile</string>
+    <string name="EmployeeProfileList">Employee Profile List</string>
+    <string name="inwordinfo">Inward Info</string>
+    <string name="store">Store</string>
+    <string name="seller">Seller</string>
+    <string name="status">Status</string>
+    <string name="newuser">New User</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="notrgister">This device is not registered ,kindly registered your device.</string>
+    <string name="primarysim">Your primary Sim not getting detected.please check.\n Do you want to Register again ?</string>
+    <string name="monitoring_dashboard">Vakrangee ATM Monitor</string>
+    <string name="moredetails"> More Details   </string>
+
+    <string name="updateLocation">Please wait update  vakrangee kendra Location details.</string>
+    <string-array name="items">
+        <item>All</item>
+        <item>Operation</item>
+        <item>Tech Live</item>
+        <item>Cancelled</item>
+        <item>Testing</item>
+        <item>Work In progress</item>
+    </string-array>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="film_genres">Film genres</string>
+    <string-array name="all_atm_list">
+
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Delhi</item>
+        <item>GCR</item>
+        <item>Gujrat</item>
+        <!--Add new position data-->
+
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jharkhand</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>MCR</item>
+        <item>NCR</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+
+
+    </string-array>
+
+    <string-array name="bihar">
+        <item>Patna</item>
+
+    </string-array>
+
+    <string-array name="Chandigarh">
+        <item>Raipur</item>
+    </string-array>
+
+    <string-array name="Delhi">
+        <item>North West</item>
+
+    </string-array>
+
+    <string-array name="GCR">
+        <item>Sindhudurg</item>
+        <item>South Goa</item>
+
+    </string-array>
+
+    <string-array name="Gujrat">
+        <item>Gandhinagar</item>
+        <item>Mahesana</item>
+        <item>Surat</item>
+    </string-array>
+
+    <string-array name="haryana">
+        <item>Panchkula</item>
+    </string-array>
+
+    <string-array name="HimachalPradesh">
+        <item>Sirmaur</item>
+    </string-array>
+
+    <string-array name="Jharkhand">
+        <item>Purbi Singhbhum</item>
+        <item>Saraikela-Kharsawan</item>
+        <item>Ranchi</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="movie_title">movie title</string>
+    <string name="action_movies">Action</string>
+    <string name="musical_movies">Musical</string>
+    <string name="drama_movies">Drama</string>
+    <string name="comedy_movies">Comedy</string>
+    <string name="thriller_movies">Thriller</string>
+    <string name="movie_genre">genre</string>
+    <string name="outdoorduty">Outdoor Duty</string>
+    <string name="add">New Outdoor Duty</string>
+
+    <string name="captureimage">Please Capture Image after upload Image.</string>
+    <string name="myVakrangeeKendra">My Vakrangee Kendra</string>
+    <string name="frontImage">Please at least Capture Front (frontage) Image in your Vakrangee Kendra.</string>
+    <string name="imageuploadsuccessful">Vakrangee Kendra data update successfully.</string>
+    <string name="vakrangeekendratime">Working Hours</string>
+    <string name="vakrangeekendraimage">Kendra Photo</string>
+    <string name="vakrangeekendralocation">Kendra Location</string>
+    <string name="serviceonlyfranchiess">Sorry. This service is available for franchisee only.</string>
+    <string name="updateTiming">Please wait update my vakrangee kendra data.</string>
+    <string name="odapply">OD apply successfully.</string>
+    <string name="serviceonlyUser">Sorry. This service is available for VL and VA only.</string>
+    <string name="odalradyexist">OD for the time frame provided already exists.</string>
+    <string name="odstarttimeendtime">OD start time should be less than OD end time.</string>
+    <string name="odstartandendtimenotsame">OD start time and end time cannot be same.</string>
+    <string name="odpassaway">You cannot apply for OD after the OD start day has passed.</string>
+
+    <string name="permissionnoallow">Access permission not allow,please goto App-> select-> Vakrangee Kendra app->
+    click on setting-> allow all permission. </string>
+
+    <string-array name="my_vakrangeekendra">
+        <item>Please Select</item>
+        <item>Frontage Thumb</item>
+        <item>LeftWall Thumb</item>
+        <item>FrontWall Thumb</item>
+        <item>RightWall Thumb</item>
+        <item>BackWall Thumb</item>
+        <item>Ceiling Thumb</item>
+        <item>Floor Thumb</item>
+        <item>Extra Thumb 1</item>
+        <item>Extra Thumb 2</item>
+        <item>Extra Thumb 3</item>
+    </string-array>
+    <string name="myVakrangeeKendraLocationDetails">VakrangeeKendra Location</string>
+
+    <string name="myAttendance">My Attendance</string>
+    <string name="estimated_completion_date">Estimated Completion Date</string>
+    <string name="label_site_commencement">Site Commencement:</string>
+    <string name="label_work_commencement">Work Commencement</string>
+    <string name="click_here_to_preview_commencement_photos">Click here to preview commencement photos.</string>
+    <string name="nextgen_current_status">Current Status</string>
+    <string name="txt_good_conditions_note">Note: Please enter missing item detail below into remarks section.</string>
+
+</resources>

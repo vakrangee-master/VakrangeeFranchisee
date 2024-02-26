@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke"
+        android:orientation="vertical">
+
+        <!-- Basic Information Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Basic Information"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBCABasicInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <!-- BCA is same as Franchisee -->
+            <LinearLayout
+                android:id="@+id/layoutSameAsFranchisee"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkboxSameAsFranchisee"
+                    style="@style/franchisee_form_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="BCA is same as Franchisee"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorLightPrimary" />
+            </LinearLayout>
+
+            <!-- Choose Photo -->
+            <LinearLayout
+                android:id="@+id/layoutChoosePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtChoosePhotoLbl"
+                            style="@style/bca_form_header"
+                            android:text="BCA\'s Passport Size Photograph	" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:text="JPG File Size less than 200 KB"
+                            android:textColor="@color/colorGreyL6"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/imgChoosePhoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:src="@drawable/ic_camera_alt_black_72dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorLightPrimary" />
+
+            <!-- BCA Name -->
+            <LinearLayout
+                android:id="@+id/layoutBCAName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtBCANameLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="BCA Name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerBCASalutation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextBCAFirstName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="First Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc" />
+
+                    <EditText
+                        android:id="@+id/editTextBCAMiddleName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="Middle Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc" />
+
+                    <EditText
+                        android:id="@+id/editTextBCALastName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="Last Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- BCA Father Name -->
+            <LinearLayout
+                android:id="@+id/layoutBCAFatherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtBCAFatherNameLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="BCA Father\'s Name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerBCAFatherSalutation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextBCAFatherFirstName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="First Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc"></EditText>
+
+                    <EditText
+                        android:id="@+id/editTextBCAFatherMiddleName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="Middle Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc"></EditText>
+
+                    <EditText
+                        android:id="@+id/editTextBCAFatherLastName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="Last Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc"></EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Gender -->
+            <LinearLayout
+                android:id="@+id/layoutGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtGenderLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Gender" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1.5">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMale"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFemale"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Female" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonOthers"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Others" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Marital Status -->
+            <LinearLayout
+                android:id="@+id/layoutMaritalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMaritalStatusLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Marital Status" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupMaritalStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMarried"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Married" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSingle"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:paddingLeft="3dp"
+                        android:text="Single" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Spouse Name -->
+            <LinearLayout
+                android:id="@+id/layoutSpouseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtSpouseNameLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Spouse Name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerSpouseSalutation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextSpouseFirstName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="First Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc"></EditText>
+
+                    <EditText
+                        android:id="@+id/editTextSpouseMiddleName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="Middle Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc"></EditText>
+
+                    <EditText
+                        android:id="@+id/editTextSpouseLastName"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:gravity="top"
+                        android:hint="Last Name"
+                        android:inputType="text|textCapWords"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColorHint="#cccccc"></EditText>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Mothers Name -->
+            <LinearLayout
+                android:id="@+id/layoutMotherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtMotherNameLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Mother\'s Name" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextMotherName"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Mother\'s Name "
+                            android:inputType="number"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Year Of Passing -->
+            <LinearLayout
+                android:id="@+id/layoutYearOfPassing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtYearOfPassingLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Year Of Passing" />
+
+                <TextView
+                    android:id="@+id/textViewYearOfPassing"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:gravity="center"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <!-- Qualification -->
+            <LinearLayout
+                android:id="@+id/layoutQualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtQualificationLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Qualification" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerQualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!-- Religion -->
+            <LinearLayout
+                android:id="@+id/layoutReligion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtReligionLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Religion" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerReligion"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!-- IIBF Certification Number -->
+            <LinearLayout
+                android:id="@+id/layoutIIBFCertificationNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtIIBFCertificationNumberLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="IIBF Certification Number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextIIBFCertificationNumber"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="IIBF Certification Number "
+                            android:inputType="number"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Date Of Passing -->
+            <LinearLayout
+                android:id="@+id/layoutDateOfPassing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtDateOfPassingLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Date Of Passing" />
+
+                <TextView
+                    android:id="@+id/textViewDateOfPassing"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:gravity="center"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <!-- BC Ability -->
+            <LinearLayout
+                android:id="@+id/layoutBCAbility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtBCAbilityLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="BC Ability" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerBCAbility"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!-- BCA DOB -->
+            <LinearLayout
+                android:id="@+id/layoutBCADOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtBCADOBLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="BCA DOB" />
+
+                <TextView
+                    android:id="@+id/textViewBCADOB"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:gravity="center"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <!-- BCA Contact Address -->
+            <LinearLayout
+                android:id="@+id/layoutBCAContactAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtBCAContactAddressLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="BCA Contact Address" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextBCAContactAddress"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="BCA Contact Address "
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:maxLength="50"
+                            android:padding="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- BCA Mobile Number-->
+            <LinearLayout
+                android:id="@+id/layoutBCAMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtBCAMobileNumberLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="BCA Mobile Number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutBgMobileNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/grey"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/mobile" />
+
+                            <EditText
+                                android:id="@+id/editTextBCAMobileNo"
+                                style="@style/bca_form_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:gravity="left|center"
+                                android:hint="BCA Mobile Number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:paddingLeft="10dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Category -->
+            <LinearLayout
+                android:id="@+id/layoutCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtCategoryLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Category" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <!-- State -->
+            <LinearLayout
+                android:id="@+id/layoutState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtStateLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="State" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerState"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- District -->
+            <LinearLayout
+                android:id="@+id/layoutDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtDistrictLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="District" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerDistrict"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Tehsil/Block -->
+            <LinearLayout
+                android:id="@+id/layoutTehsil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtTehsilLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Tehsil/Block" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerTehsil"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Village/Town/City -->
+            <LinearLayout
+                android:id="@+id/layoutVTC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtVTCLbl"
+                    style="@style/bca_form_header"
+                    android:layout_weight="0.6"
+                    android:text="Village/Town/City" />
+
+                <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                    android:id="@+id/spinnerVTC"
+                    style="@style/bca_form_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/gradient_white_spinner"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!-- Locality -->
+            <LinearLayout
+                android:id="@+id/layoutLocality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtLocalityLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Locality" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextLocality"
+                            style="@style/bca_form_normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Locality"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Pin code -->
+            <LinearLayout
+                android:id="@+id/layoutPincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtPincodeLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Pincode" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutBgPincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/grey"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_location_on_black_24dp" />
+
+                            <EditText
+                                android:id="@+id/editTextPincode"
+                                style="@style/bca_form_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:gravity="top"
+                                android:hint="Pincode"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:padding="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

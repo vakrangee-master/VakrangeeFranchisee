@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_enquiry_process"
+    android:focusable="true"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mtrl_btn_padding_top">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutApplicationStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewEnqAppStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="7dp"
+                    android:text="Application Partially Saved"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <!-- Radio button -->
+                        <LinearLayout
+                            android:id="@+id/layoutRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left|center"
+                            android:gravity="right|center"
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <RadioButton
+                                android:id="@+id/radioButtonSelection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <!-- Enquiry Name and Date -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.6"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:weightSum="1">
+
+                            <!-- Name -->
+                            <LinearLayout
+                                android:id="@+id/layoutName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_weight="0.6"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/txtNameLbl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.45"
+                                    android:text="Name "
+                                    android:textColor="@color/primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.55"
+                                    android:text="Sanjay Nandwana"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/primary"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <!-- EnquiryDate -->
+                            <LinearLayout
+                                android:id="@+id/layoutEnquiryDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_weight="0.6"
+                                android:gravity="left"
+                                android:orientation="vertical"
+                                android:paddingTop="3dp"
+                                android:weightSum="1">
+
+                                <TextView
+                                    android:id="@+id/txtEnquiryDateLbl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.45"
+                                    android:text="Enquiry Date "
+                                    android:textColor="@color/headline_lbl"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/txtEnquiryDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.55"
+                                    android:text="Sanjay Nandwana"
+                                    android:textColor="@color/color_fr_textview"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Status -->
+                        <LinearLayout
+                            android:id="@+id/layoutStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:layout_weight="0.4"
+                            android:gravity="right|center"
+                            android:orientation="horizontal"
+                            android:padding="4dp"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.75"
+                                android:text="Status "
+                                android:textColor="@color/color_fr_textview"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:typeface="sans"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/token_background"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="3dp"
+                                android:text="Sanjay Nandwana"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Enquiry Detail -->
+                    <LinearLayout
+                        android:id="@+id/linearEnquiryDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearEnquirySubDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical"
+                            android:paddingRight="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/textViewEnqEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_mail_gray_24dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:text="deepak@vakrangee.in"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/color_fr_textview"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/textViewEnqPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_smartphone_black_24dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:text="91212133423423"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/color_fr_textview"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/textViewEnqAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:text="Andheri (E)"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="@color/color_fr_textview"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnEnquiryDetail"
+                                style="@style/Widget.MaterialComponents.Button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="more"
+                                android:textAllCaps="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:theme="@style/MatButton" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="13dp"
+                                android:layout_gravity="center"
+                                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="more"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="normal"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/VakrangeeFranchisee.iml" filepath="$PROJECT_DIR$/.idea/modules/VakrangeeFranchisee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1491137271/VakrangeeFranchisee.YouTubeAndroidPlayerApi.iml" filepath="$PROJECT_DIR$/.idea/modules/-1491137271/VakrangeeFranchisee.YouTubeAndroidPlayerApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/VakrangeeFranchisee.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.iml" filepath="$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.main.iml" filepath="$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/atmloading/VakrangeeFranchisee.atmloading.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.iml" filepath="$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.main.iml" filepath="$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/atmtechlivechecklist/VakrangeeFranchisee.atmtechlivechecklist.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/104336390/VakrangeeFranchisee.barcode_reader.iml" filepath="$PROJECT_DIR$/.idea/modules/104336390/VakrangeeFranchisee.barcode_reader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.iml" filepath="$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/bcadetails/VakrangeeFranchisee.bcadetails.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-208867705/VakrangeeFranchisee.calendarview.iml" filepath="$PROJECT_DIR$/.idea/modules/-208867705/VakrangeeFranchisee.calendarview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-54310701/VakrangeeFranchisee.callrecord.iml" filepath="$PROJECT_DIR$/.idea/modules/-54310701/VakrangeeFranchisee.callrecord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-941859935/VakrangeeFranchisee.chatview.iml" filepath="$PROJECT_DIR$/.idea/modules/-941859935/VakrangeeFranchisee.chatview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.iml" filepath="$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.main.iml" filepath="$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/documentmanager/VakrangeeFranchisee.documentmanager.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1088823181/VakrangeeFranchisee.drawview.iml" filepath="$PROJECT_DIR$/.idea/modules/1088823181/VakrangeeFranchisee.drawview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.iml" filepath="$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-996414591/VakrangeeFranchisee.franchiseeexit.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.iml" filepath="$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-629365832/VakrangeeFranchisee.geofencing.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.iml" filepath="$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/hardwareacknowledgement/VakrangeeFranchisee.hardwareacknowledgement.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/VakrangeeFranchisee.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/VakrangeeFranchisee.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.iml" filepath="$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.main.iml" filepath="$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/loandocument/VakrangeeFranchisee.loandocument.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.iml" filepath="$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.main.iml" filepath="$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/locationupdation/VakrangeeFranchisee.locationupdation.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.iml" filepath="$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.main.iml" filepath="$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/networktesting/VakrangeeFranchisee.networktesting.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.iml" filepath="$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.main.iml" filepath="$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/nextgenfranchiseeapplication/VakrangeeFranchisee.nextgenfranchiseeapplication.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1557082308/VakrangeeFranchisee.scanlib.iml" filepath="$PROJECT_DIR$/.idea/modules/1557082308/VakrangeeFranchisee.scanlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.iml" filepath="$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.main.iml" filepath="$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/simcarddetails/VakrangeeFranchisee.simcarddetails.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.iml" filepath="$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sitelayout/VakrangeeFranchisee.sitelayout.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1137145594/VakrangeeFranchisee.smsverifycatcher.iml" filepath="$PROJECT_DIR$/.idea/modules/1137145594/VakrangeeFranchisee.smsverifycatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.iml" filepath="$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1106303882/VakrangeeFranchisee.supercore.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ucrop/VakrangeeFranchisee.ucrop.iml" filepath="$PROJECT_DIR$/.idea/modules/ucrop/VakrangeeFranchisee.ucrop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.iml" filepath="$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.main.iml" filepath="$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/workinprogress/VakrangeeFranchisee.workinprogress.unitTest.iml" />
+    </modules>
+  </component>
+</project>

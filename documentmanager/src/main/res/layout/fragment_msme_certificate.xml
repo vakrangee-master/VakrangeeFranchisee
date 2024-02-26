@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        app:contentPadding="5dp">
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/colorPrimary"
+            android:scrollbars="vertical">
+
+            <!-- MSME Certification Data Upload  Details -->
+            <LinearLayout
+                android:id="@+id/layoutMSMECertificationDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stroke"
+                android:orientation="vertical">
+
+                <!-- MSME Certification Data Upload Details Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightPrimary"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="MSME Certification Upload"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+                <!-- Name on MSME Certificate -->
+                <LinearLayout
+                    android:id="@+id/layoutNameOnMSMECertificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtNameOnMSMECertificateLbl"
+                                style="@style/bca_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Name on MSME Certificate" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editTextNameOnMSMECertificate"
+                                style="@style/bca_form_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Name on MSME Certificate"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="100"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- MSME Certificate Number -->
+                <LinearLayout
+                    android:id="@+id/layoutMSMECertificateNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtMSMECertificateNumberLbl"
+                                style="@style/bca_form_header"
+                                android:layout_weight="0.6"
+                                android:text="MSME Certificate Number" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editTextMSMECertificateNumber"
+                                style="@style/bca_form_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="MSME Certificate Number"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- MSME Issuing Authority -->
+                <LinearLayout
+                    android:id="@+id/layoutMSMEIssuingAuthority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtMSMEIssuingAuthorityLbl"
+                                style="@style/bca_form_header"
+                                android:layout_weight="0.6"
+                                android:text="MSME Issuing Authority" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editTextMSMEIssuingAuthority"
+                                style="@style/bca_form_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="MSME Issuing Authority"
+                                android:inputType="textCapCharacters"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- State -->
+                <LinearLayout
+                    android:id="@+id/layoutState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtStateLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="State" />
+
+                    <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                        android:id="@+id/spinnerState"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!-- District -->
+                <LinearLayout
+                    android:id="@+id/layoutDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtDistrictLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="District" />
+
+                    <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                        android:id="@+id/spinnerDistrict"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                </LinearLayout>
+
+                <!-- Issuing Date of MSME -->
+                <LinearLayout
+                    android:id="@+id/layoutIssuingDateOfMSME"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtIssuingDateLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Certificate Issuing Date" />
+
+                    <TextView
+                        android:id="@+id/textViewIssuingDateOfMSME"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:drawableRight="@drawable/ic_date_range_black_24dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Certificate Valid From Date of MSME -->
+                <LinearLayout
+                    android:id="@+id/layoutValidFromDateOfMSME"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtValidFromDateLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Certificate Valid From Date" />
+
+                    <TextView
+                        android:id="@+id/textViewValidFromDateOfMSME"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:drawableRight="@drawable/ic_date_range_black_24dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- Exipry Date of MSME -->
+                <LinearLayout
+                    android:id="@+id/layoutExpiringDateOfMSME"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtExpiringDateLbl"
+                        style="@style/bca_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Certificate Expiry Date" />
+
+                    <TextView
+                        android:id="@+id/textViewExpiryDateOfMSME"
+                        style="@style/bca_form_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:drawableRight="@drawable/ic_date_range_black_24dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <!-- MSME Certificate Scanned Copy  -->
+                <LinearLayout
+                    android:id="@+id/layoutMSMECertificationCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtMSMECopyLbl"
+                                style="@style/bca_form_header"
+                                android:text="MSME Certificate Scanned Copy " />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="left"
+                                android:text="JPG File Size less than 1 MB"
+                                android:textColor="@color/colorGreyL6"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgMSMECerificationImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/ic_camera_alt_black_72dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

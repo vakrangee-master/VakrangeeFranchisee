@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="in.vakrangee.franchisee.activity.UploadImageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="left"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/MyDrawerArrowToggle" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false"></ImageView>
+
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+
+
+                <Button
+                    android:id="@+id/btnwall1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="wall-1"
+                    android:textColor="@color/white"
+                    android:theme="@style/MyButton">
+
+
+                </Button>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:background="#454545" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false" />
+
+                <Button
+                    android:id="@+id/btnwall2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="wall-2"
+                    android:textColor="@color/white"
+
+                    android:theme="@style/MyButton" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false" />
+
+                <Button
+                    android:id="@+id/btnwall3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="wall-3"
+                    android:textColor="@color/white"
+
+                    android:theme="@style/MyButton" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false" />
+
+                <Button
+                    android:id="@+id/btnwall4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="wall-4"
+                    android:textColor="@color/white"
+
+                    android:theme="@style/MyButton" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false"></ImageView>
+
+                <Button
+                    android:id="@+id/btnwall5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="Front"
+                    android:textColor="@color/white"
+
+                    android:theme="@style/MyButton">
+
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false"></ImageView>
+
+                <Button
+                    android:id="@+id/btnwall6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="Top"
+                    android:textColor="@color/white"
+
+                    android:theme="@style/MyButton">
+
+
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin1"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+
+                    android:focusable="false"></ImageView>
+
+                <Button
+                    android:id="@+id/btnwall7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="Floor"
+                    android:textColor="@color/white"
+
+                    android:theme="@style/MyButton">
+
+
+                </Button>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin5"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btnUploadSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:visibility="invisible"
+                    android:textColor="@color/white"
+                    android:theme="@style/MyButton">
+
+
+                </Button>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/exif"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="data" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/container_toolbar">
+
+                    <fragment xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/locationMarker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Locality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_btn_current_location"
+                            android:drawablePadding="14.0dip"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:text="Click to change location"
+                            android:textSize="20.0sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/locationMarkertext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corner_map"
+                            android:gravity="center"
+                            android:minWidth="250dp"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:text=" Set your Location "
+                            android:textColor="@android:color/white" />
+
+                        <ImageView
+                            android:id="@+id/imageMarker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/add_marker" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

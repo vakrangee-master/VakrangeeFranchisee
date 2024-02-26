@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawView"><attr format="color" name="dv_draw_color"/><attr format="enum" name="dv_draw_tool">
+            <enum name="pen" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="rectangle" value="2"/>
+            <enum name="circle" value="3"/>
+        </attr><attr format="enum" name="dv_draw_mode">
+            <enum name="draw" value="0"/>
+            <enum name="text" value="1"/>
+            <enum name="eraser" value="2"/>
+        </attr><attr format="integer" name="dv_draw_width"/><attr format="integer" name="dv_draw_alpha"/><attr format="boolean" name="dv_draw_anti_alias"/><attr format="boolean" name="dv_draw_dither"/><attr format="enum" name="dv_draw_style">
+            <enum name="fill" value="0"/>
+            <enum name="fill_stroke" value="1"/>
+            <enum name="stroke" value="2"/>
+        </attr><attr format="enum" name="dv_draw_corners">
+            <enum name="butt" value="0"/>
+            <enum name="round" value="1"/>
+            <enum name="square" value="2"/>
+        </attr><attr format="enum" name="dv_draw_font_family">
+            <enum name="default_font" value="0"/>
+            <enum name="monospace" value="1"/>
+            <enum name="sans_serif" value="2"/>
+            <enum name="serif" value="3"/>
+        </attr><attr format="integer" name="dv_draw_font_size"/><attr format="boolean" name="dv_draw_enable_zoom"/><attr format="float" name="dv_draw_max_zoom_factor"/><attr format="float" name="dv_draw_zoomregion_scale"/><attr format="float" name="dv_draw_zoomregion_minscale"/><attr format="float" name="dv_draw_zoomregion_maxscale"/><attr format="enum" name="dv_draw_orientation">
+            <enum name="portrait" value="0"/>
+            <enum name="landscape" value="1"/>
+        </attr><attr format="boolean" name="dv_draw_is_camera"/></declare-styleable>
+    <string name="app_name">DrawView</string>
+</resources>

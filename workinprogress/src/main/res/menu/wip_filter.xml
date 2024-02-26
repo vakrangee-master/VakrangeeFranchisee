@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/filter_wip_old"
+        android:title="action_filter"
+        android:textColor="@color/white"
+        app:showAsAction="always|collapseActionView" />
+
+</menu>

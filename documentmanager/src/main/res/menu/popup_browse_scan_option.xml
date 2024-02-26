@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/menuScanAgreement"
+    android:icon="@drawable/ic_add_photo_16dp"
+    android:title="@string/scan_agreement_text"
+    app:showAsAction="always|collapseActionView" />
+<item
+    android:id="@+id/menuBrowseFile"
+    android:icon="@drawable/ic_folder_16dp"
+    android:orderInCategory="100"
+    android:title="@string/browse_text"
+    app:showAsAction="always|collapseActionView" />
+</menu>

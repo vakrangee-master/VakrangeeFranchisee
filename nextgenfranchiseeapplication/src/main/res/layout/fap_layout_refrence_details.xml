@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_stroke"
+        android:orientation="vertical">
+
+        <!-- Refrence Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightPrimary"
+                android:gravity="left"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Reference"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtRefrenceHeader1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="1st Reference"
+                    android:textColor="@color/gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtRefrenceHeader2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="2nd Reference"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutReferencesParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1st Reference -->
+            <LinearLayout
+                android:id="@+id/layout1stRefrenceAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <!-- User Name -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt1stRefrenceLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Applicant Name" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinner1stRefrenceSalutation"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="0.7"
+                                android:background="@drawable/gradient_spinner"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editText1stRefrenceFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="First Name"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="#2d2d2d"
+                                android:textColorHint="#cccccc"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <EditText
+                                android:id="@+id/editText1stRefrenceMiddleName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Middle Name"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="#2d2d2d"
+                                android:textColorHint="#cccccc"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <EditText
+                                android:id="@+id/editText1stRefrenceLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Last Name"
+                                android:inputType="textCapWords"
+                                android:maxLength="50"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="#2d2d2d"
+                                android:textColorHint="#cccccc"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Mobile info -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt1stRefrenceMobileLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_weight="0.6"
+                        android:text="@string/MobileNumber" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/grey"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/mobile" />
+
+                        <EditText
+                            android:id="@+id/editText1stRefrenceMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="@string/MobileNumber"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:padding="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- EmailId -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt1stRefrenceEmailLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Email ID" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/grey"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_mail_gray_24dp" />
+
+                        <EditText
+                            android:id="@+id/editText1stRefrenceEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:gravity="top"
+                            android:hint="Email ID"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Realtionship -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceRealtionship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt1stRefrenceRealtionshipLbl"
+                        style="@style/franchisee_form_header"
+                        android:text="Relationship" />
+
+                    <Spinner
+                        android:id="@+id/spinner1stRefrenceRealtionship"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Current_Occupation -->
+                <LinearLayout
+                    android:id="@+id/layout_1stRefrence_Current_Occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtCurrent_1stRefrence_OccupationLbl"
+                        style="@style/franchisee_form_header"
+                        android:text="Occupation" />
+
+                    <Spinner
+                        android:id="@+id/spinner_1stRefrence_Current_Occupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Address Line 1 -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceAddressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt1stRefrenceAddressLine1Lbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Address" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editText1stRefrenceAddressLine1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Address Line 1"
+                                android:inputType="textMultiLine|textCapWords"
+                                android:lines="3"
+                                android:maxLength="35"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:text="Maximum of 35 characters allowed."
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Address Line 2 -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceAddressLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt1stRefrenceAddressLine2Lbl"
+                            style="@style/franchisee_form_header"
+                            android:text="Address Line 2"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editText1stRefrenceAddressLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Address Line 2"
+                                android:inputType="textMultiLine|textCapWords"
+                                android:lines="3"
+                                android:maxLength="35"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:text="Maximum of 35 characters allowed."
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Landmark -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrenceLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt1stRefrenceLandmarkLbl"
+                            style="@style/franchisee_form_header"
+                            android:text="Landmark"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:orientation="horizontal"
+                                android:padding="1dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                                <EditText
+                                    android:id="@+id/editText1stRefrenceLandmark"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="left|center"
+                                    android:hint="Landmark"
+                                    android:inputType="text|textCapWords"
+                                    android:maxLength="35"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:text="Maximum of 35 characters allowed."
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Pin code -->
+                <LinearLayout
+                    android:id="@+id/layout1stRefrencePincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt1stRefrencePincodeLbl"
+                        style="@style/franchisee_form_header"
+                        android:text="Pincode" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/grey"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_location_on_black_24dp" />
+
+                        <EditText
+                            android:id="@+id/editText1stRefrencePincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:baselineAligned="false"
+                            android:gravity="top"
+                            android:hint="Pincode"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 2nd Refrence -->
+            <LinearLayout
+                android:id="@+id/layout2ndRefrenceAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- User Name-->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt2ndRefrenceLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Applicant Name" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="38dp"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinner2ndRefrenceSalutation"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="0.7"
+                                android:background="@drawable/gradient_spinner"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/editText2ndRefrenceFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="First Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="#2d2d2d"
+                            android:textColorHint="#cccccc"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/editText2ndRefrenceMiddleName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Middle Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="#2d2d2d"
+                            android:textColorHint="#cccccc"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/editText2ndefrenceLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top"
+                            android:hint="Last Name"
+                            android:inputType="textCapWords"
+                            android:maxLength="50"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="#2d2d2d"
+                            android:textColorHint="#cccccc"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Mobile No -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt2ndRefrenceMobileLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="@string/MobileNumber" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:orientation="horizontal"
+                                android:padding="1dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/mobile" />
+
+                                <EditText
+                                    android:id="@+id/editText2ndRefrenceMobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="top"
+                                    android:hint="@string/MobileNumber"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:padding="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="3dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- EmailId -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt2ndRefrenceEmailLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Email ID" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:orientation="horizontal"
+                                android:padding="1dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_mail_gray_24dp" />
+
+                                <EditText
+                                    android:id="@+id/editText2ndRefrenceEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="top"
+                                    android:hint="Email ID"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLength="50"
+                                    android:padding="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="3dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Relationship -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceRealtionship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txt2ndRefrenceRealtionshipLbl"
+                        style="@style/franchisee_form_header"
+                        android:text="Relationship" />
+
+                    <Spinner
+                        android:id="@+id/spinner2ndRefrenceRealtionship"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Current_Occupation -->
+                <LinearLayout
+                    android:id="@+id/layout_2ndRefrence_Current_Occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtCurrent_2ndRefrence_OccupationLbl"
+                        style="@style/franchisee_form_header"
+                        android:text="Occupation" />
+
+                    <Spinner
+                        android:id="@+id/spinner_2ndRefrence_Current_Occupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Address Line 1 -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceAddressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt2ndRefrenceAddressLine1Lbl"
+                                style="@style/franchisee_form_header"
+                                android:text="Address" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editText2ndRefrenceAddressLine1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Address Line 1"
+                                android:inputType="textMultiLine|textCapWords"
+                                android:lines="3"
+                                android:maxLength="35"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:text="Maximum of 35 characters allowed."
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Address Line 2 -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceAddressLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt2ndRefrenceAddressLine2Lbl"
+                                style="@style/franchisee_form_header"
+                                android:text="Address Line 2"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/editText2ndRefrenceAddressLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Address Line 2"
+                                android:inputType="textMultiLine|textCapWords"
+                                android:lines="3"
+                                android:maxLength="35"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:text="Maximum of 35 characters allowed."
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Landmark -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrenceLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt2ndRefrenceLandmarkLbl"
+                                style="@style/franchisee_form_header"
+                                android:text="Landmark"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:orientation="horizontal"
+                                android:padding="1dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                                <EditText
+                                    android:id="@+id/editText2ndRefrenceLandmark"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="left|center"
+                                    android:hint="Landmark"
+                                    android:inputType="text|textCapWords"
+                                    android:maxLength="35"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:text="Maximum of 35 characters allowed."
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- Pin code -->
+                <LinearLayout
+                    android:id="@+id/layout2ndRefrencePincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt2ndRefrencePincodeLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Pincode" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:orientation="horizontal"
+                                android:padding="1dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/grey"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                                <EditText
+                                    android:id="@+id/editText2ndRefrencePincode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="top"
+                                    android:hint="Pincode"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:padding="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="3dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

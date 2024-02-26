@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/stroke_bg"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/fragmentPhotoCapture"
+            android:name="in.vakrangee.franchisee.commongui.photocapture.PhotoFragment"
+            class="in.vakrangee.franchisee.commongui.photocapture.PhotoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="photoCapture" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGetData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchPlace"
+            android:text="Get Data" />
+
+        <Button
+            android:id="@+id/btnPlaceSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchPlace"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/btnCapturePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="capturePhoto"
+            android:text="Capture" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_shape_gray_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/independentwork_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_shape_orange_bg">
+
+            <ImageView
+                android:id="@+id/independentwork_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/ic_photo_blue_24dp"/>
+
+            <TextView
+                android:id="@+id/independentwork_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="Press Here" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imgResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

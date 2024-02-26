@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="capture_msg">Click on Capture to Scan images.</string>
+    <string name="delete_text">Delete</string>
+    <string name="failed_pdf">Failed to create PDF.</string>
+    <string name="scan_document_text">Scan Document</string>
+    <string name="browse_text">Browse File</string>
+    <string name="select_all_text">Select All</string>
+    <string name="agreement_back_msg">Do you want to save Images?</string>
+    <string name="delete_document_msg">Are you sure you want to delete all Images?</string>
+    <string name="delete_selected_document_msg">Are you sure you want to delete selected Images?</string>
+    <string name="no_document_to_delete_msg">No Image selected for deletion.</string>
+    <string name="agreement_failed_to_delete_msg">Document Images failed to delete.</string>
+    <string name="agreement_delete_success_msg"> Document Images deleted successfully.</string>
+    <string name="selected_doc_delete_success_msg">Selected Document Images deleted successfully.</string>
+</resources>

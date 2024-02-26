@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreyL2"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardElevation="1dp"
+            app:contentPadding="5dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!--layout Courier Name Spinner-->
+                    <LinearLayout
+                        android:id="@+id/layoutPoster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txtCourierName"
+                            style="@style/franchisee_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Delivery Mode" />
+
+                        <!--layout radio group-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupDelivery"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonCourier"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="0.5"
+                                    android:checked="false"
+                                    android:text="Courier"
+                                    android:textSize="16dp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonHandDelivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="0.5"
+                                    android:checked="false"
+                                    android:text="Hand Delivery"
+                                    android:textSize="16dp" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                            android:id="@+id/spinnerCourierType"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/gradient_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/gray"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <!--layout Mian Hand Delivery-->
+                    <LinearLayout
+                        android:id="@+id/mainLayoutHandDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <!--layout courier name-->
+                        <LinearLayout
+                            android:id="@+id/layoutCourierName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtlayoutCourierNameLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Courier Name" />
+
+                            <EditText
+                                android:id="@+id/editTextCourierName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/edittext_top_bg"
+                                android:gravity="top"
+                                android:hint="Enter Courier Name"
+                                android:inputType="text"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+                        <!--layout courier date-->
+                        <LinearLayout
+                            android:id="@+id/layoutlayoutCourierDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtCourierDateLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Courier Date" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutStartDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:padding="5dp"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/textViewDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                                    android:gravity="start|center"
+                                    android:padding="5dp"
+                                    android:text="Enter Courier Date"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--layout awb no-->
+                        <LinearLayout
+                            android:id="@+id/layoutAwb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtlayoutAwbLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Airway Bill No (AWB)" />
+
+                            <EditText
+                                android:id="@+id/editTextAwb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/edittext_top_bg"
+                                android:gravity="top"
+                                android:hint="Enter Airway Bill No (AWB)"
+                                android:inputType="text"
+                                android:maxLength="30"
+                                android:padding="8dp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+
+                        <!--layout capture agreement Image -->
+                        <LinearLayout
+                            android:id="@+id/layoutAgreementImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/txtImagelayoutAgreementImage"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Airway Bill Image" />
+
+
+                            <ImageView
+                                android:id="@+id/imgAgreementImage"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_camera_alt_black_72dp" />
+
+                        </LinearLayout>
+
+                        <!--layout remarks-->
+                        <LinearLayout
+                            android:id="@+id/Remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtRemarksLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Remarks" />
+
+                            <EditText
+                                android:id="@+id/editTextRemarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Remarks"
+                                android:inputType="textMultiLine"
+                                android:lines="3"
+                                android:padding="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <!--layout Main  Courier-->
+
+                    <LinearLayout
+                        android:id="@+id/mainLayoutCourier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <!--layout receive date -->
+
+                        <LinearLayout
+                            android:id="@+id/layoutlayoutReceiveDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtReceiveDateLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Received Date" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutCourierReceiveDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/textViewReceivedDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                                    android:gravity="start|center"
+                                    android:padding="5dp"
+                                    android:text="Received Date"
+                                    android:textColor="@color/gray"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <!--layout Employee ID-->
+                        <LinearLayout
+                            android:id="@+id/EmployeeID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtEmployeeIDLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Handover To" />
+
+                            <EditText
+                                android:id="@+id/editTextEmployeeID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Handover To"
+                                android:inputType="text"
+                                android:maxLength="9"
+                                android:padding="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+                        <!--layout courier remarks-->
+                        <LinearLayout
+                            android:id="@+id/CourierRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtCourierRemarksLbl"
+                                style="@style/franchisee_form_header"
+                                android:layout_weight="0.6"
+                                android:text="Remarks" />
+
+                            <EditText
+                                android:id="@+id/editTextCourierRemarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_bottom_bg"
+                                android:gravity="top"
+                                android:hint="Remarks"
+                                android:inputType="textMultiLine"
+                                android:lines="3"
+                                android:padding="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:singleLine="true"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+
+                        </LinearLayout>
+
+
+                        <!--layout Sign pad-->
+                        <LinearLayout
+                            android:id="@+id/LayoutSign"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <com.github.gcacace.signaturepad.views.SignaturePad
+                                android:id="@+id/signature_pad"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:background="@color/grey" />
+
+                            <TextView
+                                android:id="@+id/btnClearSign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:textSize="24sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/layoutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:weightSum="1">
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.3"
+                android:background="@drawable/buttonroundedsubmit"
+                android:gravity="center_vertical|center_horizontal|left"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

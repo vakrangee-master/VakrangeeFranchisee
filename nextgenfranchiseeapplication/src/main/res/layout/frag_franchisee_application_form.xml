@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- Body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Franchisee Details -->
+                <LinearLayout
+                    android:id="@+id/layoutParentFranchiseeDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPFranchiseeDetails"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPFranchiseeDetailFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPFranchiseeDetailFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPFranchiseeDetail" />
+
+                </LinearLayout>
+
+                <!-- Communication Address -->
+                <LinearLayout
+                    android:id="@+id/layoutParentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPAddress"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPAddressFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPAddressFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPAddress" />
+
+                </LinearLayout>
+
+                <!-- Contact Information -->
+                <LinearLayout
+                    android:id="@+id/layoutParentContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPContact"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPContactFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPContactFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPContact" />
+
+                </LinearLayout>
+
+                <!-- General Information -->
+                <LinearLayout
+                    android:id="@+id/layoutParentGeneral"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPGeneral"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPGeneralFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPGeneralFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPGeneral" />
+
+                </LinearLayout>
+
+                <!-- Bank Details -->
+                <LinearLayout
+                    android:id="@+id/layoutParentBankDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPBankDetails"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPBankDetailFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPBankDetailFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPBankDetails" />
+
+                </LinearLayout>
+
+                <!-- Propose Vakrangee Kendra Detail -->
+                <LinearLayout
+                    android:id="@+id/layoutParentProposedDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPProposedKendraDetails"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPProposedKendraDetailFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPProposedKendraDetailFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPProposedKendraDetails" />
+
+                </LinearLayout>
+
+                <!-- References -->
+                <LinearLayout
+                    android:id="@+id/layoutParentReferences"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPReferences"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPReferencesFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPReferencesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPReferences" />
+
+                </LinearLayout>
+
+                <!-- Criteria -->
+                <LinearLayout
+                    android:id="@+id/layoutParentCriteria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentFAPCriteria"
+                        android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPCriteriaFragment"
+                        class="in.vakrangee.franchisee.nextgenfranchiseeapplication.FAPCriteriaFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="FAPCriteria" />
+
+                </LinearLayout>
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

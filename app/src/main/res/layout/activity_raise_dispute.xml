@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarRaiseDispute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/MyDrawerArrowToggle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="7dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_stroke"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/ackScrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fadeScrollbars="false"
+                android:paddingRight="3dp"
+                android:scrollbarSize="2dp"
+                android:scrollbarThumbVertical="@color/colorLightPrimary"
+                android:scrollbars="vertical">
+
+                <!-- Details -->
+                <LinearLayout
+                    android:id="@+id/layoutRaiseDisputeParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <!-- Date -->
+                    <LinearLayout
+                        android:id="@+id/layoutDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txtDateLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Payment Date" />
+
+                        <TextView
+                            android:id="@+id/textViewDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Bank Name -->
+                    <LinearLayout
+                        android:id="@+id/layoutBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txtBankNameLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Bank Name" />
+
+                        <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                            android:id="@+id/spinnerBankName"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <!-- IFSC Code -->
+                    <LinearLayout
+                        android:id="@+id/layoutIFSCCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtIFSCCodeLbl"
+                                    style="@style/bca_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="IFSC Code" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/editTextIFSCCode1"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="IFSC Code"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="11"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true" />
+
+                                <EditText
+                                    android:id="@+id/editTextIFSCCode2"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="Confirm IFSC Code"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="11"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Account Holder Name -->
+                    <LinearLayout
+                        android:id="@+id/layoutAccountHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtAccountHolderNameLbl"
+                                    style="@style/bca_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="Account Holder Name" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/editTextAccountHolderName"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="Account Holder Name"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="50"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Account Number -->
+                    <LinearLayout
+                        android:id="@+id/layoutAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtAccountNumberLbl"
+                                    style="@style/bca_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="Account Number" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/editTextAccountNumber1"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="Account Number"
+                                    android:inputType="number"
+                                    android:maxLength="20"
+                                    android:padding="10dp"
+                                    android:singleLine="true" />
+
+                                <EditText
+                                    android:id="@+id/editTextAccountNumber2"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="Confirm Bank A/c No"
+                                    android:inputType="number"
+                                    android:maxLength="20"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Transfer Mode -->
+                    <LinearLayout
+                        android:id="@+id/layoutTransferMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txtTransferModeLbl"
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="Transfer Mode" />
+
+                        <in.vakrangee.supercore.franchisee.utils.CustomSearchableSpinner
+                            android:id="@+id/spinnerTransferMode"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:dropDownWidth="match_parent"
+                            android:fontFamily="sans-serif-condensed"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/headline_lbl"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <!-- UTR -->
+                    <LinearLayout
+                        android:id="@+id/layoutUTR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtUTRLbl"
+                                    style="@style/bca_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="UTR (Unique Transaction Reference Number)" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/editTextUTR"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                                    android:hint="UTR"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="22"
+                                    android:padding="10dp"
+                                    android:singleLine="true" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Bank Transaction ID (RRN) -->
+                    <LinearLayout
+                        android:id="@+id/layoutBankTransactionID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtBankTransactionIDLbl"
+                                    style="@style/bca_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="Bank Transaction ID (RRN)" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/editTextBankTransactionID"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="Bank Transaction ID (RRN)"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="22"
+                                    android:padding="10dp"
+                                    android:singleLine="true" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Amount -->
+                    <LinearLayout
+                        android:id="@+id/layoutAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtAmountLbl"
+                                    style="@style/bca_form_header"
+                                    android:layout_weight="0.6"
+                                    android:text="Amount" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/editTextAmount"
+                                    style="@style/bca_form_normal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/edittext_bottom_bg"
+                                    android:gravity="top"
+                                    android:hint="Amount "
+                                    android:inputType="number"
+                                    android:maxLength="15"
+                                    android:padding="10dp"
+                                    android:singleLine="true" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Proof -->
+                    <LinearLayout
+                        android:id="@+id/layoutProofImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtProofImageLbl"
+                                        style="@style/bca_form_header"
+                                        android:layout_width="match_parent"
+                                        android:layout_marginRight="10dp"
+                                        android:text="Proof Photo" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="left"
+                                    android:text="File Size less than 1 MB"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/imgProofImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="100dp"
+                                        android:src="@drawable/ic_camera_alt_black_72dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Remarks -->
+                    <LinearLayout
+                        android:id="@+id/layoutRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/bca_form_header"
+                            android:layout_weight="0.6"
+                            android:text="@string/lblRemarks" />
+
+                        <EditText
+                            android:id="@+id/editTextRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:gravity="top|center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            style="@style/bca_form_normal"
+                            android:hint="@string/hintRemarks"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:maxLength="500"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="3dp"
+                            android:textColor="#2d2d2d"
+                            android:textColorHint="@color/colorGreyL6"
+                           ></EditText>
+                    </LinearLayout>
+
+                    <!-- Submit -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSubmit"
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.4"
+                            android:gravity="center"
+                            android:text="Submit"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textStyle="bold"
+                            android:theme="@style/MatButton" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

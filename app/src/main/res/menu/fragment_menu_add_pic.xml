@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sellbeesclean.MainActivity">
+
+
+    <!-- CAMERA -->
+    <item
+        android:id="@+id/action_camera"
+        android:icon="@drawable/addod"
+        android:orderInCategory="200"
+        android:title="action_camera"
+        app:showAsAction="ifRoom" />
+
+    <!-- SEARCH -->
+
+</menu>

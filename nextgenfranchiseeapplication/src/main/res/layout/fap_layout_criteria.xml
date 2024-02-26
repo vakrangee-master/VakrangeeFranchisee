@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/layoutCriteriaParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_stroke"
+        android:orientation="vertical">
+
+        <!-- Criteria Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightPrimary"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Criteria"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="100"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCriteriaHeaderYes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="Criteria"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCriteriaHeader1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@color/grey"
+                        android:gravity="start"
+                        android:padding="7dp"
+                        android:text="Yes"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtCriteriaHeader12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:background="@color/grey"
+                        android:gravity="start"
+                        android:padding="7dp"
+                        android:text="No"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Criteria details -->
+            <LinearLayout
+                android:id="@+id/layoutCriteriaDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Criteria Line 1 -->
+                <LinearLayout
+                    android:id="@+id/layoutCriteriaLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtCriteriaLine1"
+                                style="@style/franchisee_form_header"
+                                android:text="Are you able to dedicate full time managing and working at the Kendra?"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupCriteriaLine11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="40">
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center"
+
+                                    />
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp" />
+
+
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--critria line 2-->
+                <LinearLayout
+                    android:id="@+id/layoutCriteriaLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtCriteriaLine2"
+                                style="@style/franchisee_form_header"
+                                android:text="Are you affiliated to any Political Party?"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupCriteriaLine2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="40">
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine21"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine22"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Criteria line 3-->
+                <LinearLayout
+                    android:id="@+id/layoutCriteriaLine3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtCriteriaLine3"
+                                style="@style/franchisee_form_header"
+                                android:text="Have you ever filed bankruptcy before?"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupCriteriaLine3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="40">
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine31"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine32"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Criteria line 4-->
+                <LinearLayout
+                    android:id="@+id/layoutCriteriaLine4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtCriteriaLine4"
+                                style="@style/franchisee_form_header"
+                                android:text="Is there any current legal proceeding against you?"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupCriteriaLine4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="40">
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine41"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine42"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Criteria line 5-->
+                <LinearLayout
+                    android:id="@+id/layoutCriteriaLine5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="100"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtCriteriaLine5"
+                                style="@style/franchisee_form_header"
+                                android:text="Is there any FIR filed against you?"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroupCriteriaLine5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="40">
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine51"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobuttonCriteriaLine52"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="20"
+                                    android:gravity="left|center" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorLightPrimary" />
+
+                <!--Click Here download consent form-->
+                <LinearLayout
+                    android:id="@+id/layoutClickHere"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtClickHereDownload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Kindly provide your consent for Background Verification by signing the document and uploading the signed scanned copy."
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/txtClickDownload"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="left|center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Network Speed Testing"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:theme="@style/ConsentMatButton" />
+
+                    <TextView
+                        android:id="@+id/txtClickDownload1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:visibility="gone"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!--Chosse photo for Background verifitcation-->
+                <LinearLayout
+                    android:id="@+id/layoutChoosePhotoBKVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtChoosePhotoBKVerification"
+                                style="@style/franchisee_form_header"
+                                android:text="Background Verification Consent" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="left"
+                                android:text="@string/file_size_1mb"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgChoosePhotoBKVerification"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/ic_camera_alt_black_72dp" />
+
+                                <TextView
+                                    android:id="@+id/txtChoosePhotoNameBKVerification"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Image.jpeg"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <Button
+                                    android:id="@+id/btnChooseFileBKVerification"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:gravity="center"
+                                    android:text="Choose file"
+                                    android:textAllCaps="false"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--heara about us-->
+                <LinearLayout
+                    android:id="@+id/layoutAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtAboutUsLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_weight="0.6"
+                        android:text="How did you hear about us?    " />
+
+                    <Spinner
+                        android:id="@+id/spinnerAboutUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/gradient_spinner"
+                        android:dropDownWidth="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorLightPrimary"
+                    android:visibility="gone" />
+
+                <!--Application Exit-->
+                <LinearLayout
+                    android:id="@+id/layoutAppExit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtAppExitLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_weight="0.6"
+                        android:text="Vakrangee Kendra Franchisee Application Exit" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox_exit_application"
+                        style="@style/franchisee_form_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="I want to exit from Vakrangee Kendra Franchisee Application Process."
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

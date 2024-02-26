@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.vakrangee.simcarddetail">
+
+    <application>
+        <activity android:name="in.vakrangee.simcarddetail.simcarddetails.SimcardDetailsActivity"></activity>
+    </application>
+
+</manifest>

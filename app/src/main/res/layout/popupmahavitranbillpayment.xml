@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:padding="10dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/dthverify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/gray"
+            android:textSize="14dp"
+
+            android:text="Please verify and confirm Consumer Name, Consumer Number and Bill Amount."
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:textSize="14dp"
+
+                android:textColor="@color/submit"
+
+                android:text="Consumer Name"
+
+
+                >
+
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/mahavirtranname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:textColor="@color/submit"
+                android:textSize="14dp"
+
+                android:text="name"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+
+                android:ems="10"
+                android:textColor="@color/submit"
+                android:textSize="14dp"
+
+                android:text="Consumer Number"
+                >
+
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/numbermahavirtran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:textSize="14dp"
+                android:drawablePadding="3dp"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/submit"
+                android:text="number"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:textColor="@color/submit"
+                android:textSize="14dp"
+
+                android:layout_weight="0.5"
+                android:text="Amount"
+                >
+
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/amountmahavirtran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:textColor="@color/submit"
+                android:textSize="14dp"
+                android:drawableStart="@drawable/rupes"
+                android:text="number"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:textColor="@color/submit"
+                android:textSize="14dp"
+
+                android:layout_weight="0.5"
+                android:text="Enter Email"
+                >
+
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/popupemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textSize="14dp"
+                android:singleLine="true"
+                android:textColor="@color/submit"
+                android:hint="Enter Email Id"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:textColor="@color/submit"
+                android:textSize="14dp"
+                android:layout_weight="0.5"
+                android:text="Enter Mobile Number"
+                >
+
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/popupmobileno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:ems="10"
+
+                android:maxLength="10"
+                android:inputType="number"
+                android:textSize="14dp"
+                android:textColor="@color/submit"
+                android:hint="Enter Mobile Number"
+                 />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

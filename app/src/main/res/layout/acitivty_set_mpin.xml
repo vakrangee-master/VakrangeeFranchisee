@@ -1,0 +1,164 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/MyDrawerArrowToggle" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp">
+
+
+            <TextView
+                android:id="@+id/mpinset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/setMpin"
+                android:textColor="@color/gray"
+                android:textSize="30dp" />
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="#c0c0c0" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <EditText
+
+
+                        android:id="@+id/rePassword1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/edittext_top_bg"
+                        android:drawableLeft="@drawable/password"
+                        android:drawablePadding="10dp"
+                        android:gravity="top"
+                        android:hint="@string/password"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/gray"
+                        android:textColorHint="#cccccc">
+
+
+                    </EditText>
+
+
+                    <EditText
+
+                        android:id="@+id/rePassword2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edittext_top_bg"
+                        android:drawableLeft="@drawable/password"
+                        android:drawablePadding="10dp"
+                        android:gravity="top"
+                        android:hint="@string/confrimPassword"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/gray"
+                        android:textColorHint="#cccccc">
+
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="@string/mpinMsg"
+                    android:textColor="@color/gray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/l1"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/buttonroundedcancel"
+                        android:padding="2dp"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/passwordcheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/buttonroundedsubmit"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

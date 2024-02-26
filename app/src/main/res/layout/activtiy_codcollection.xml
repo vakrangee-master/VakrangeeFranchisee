@@ -1,0 +1,174 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/MyDrawerArrowToggle" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="COD Collection"
+            android:textColor="#2d2d2d"
+
+            android:textSize="30dp" />
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:text="@string/rs"
+            android:textColor="#2D2D2D"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+
+                    android:id="@+id/cmobilenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittext_top_bg"
+                    android:drawableLeft="@drawable/man"
+
+
+                    android:gravity="top"
+                    android:hint="AWB Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="#2d2d2d"
+                    android:textColorHint="#cccccc"
+                    >
+
+
+                </EditText>
+
+                <EditText
+
+                    android:id="@+id/cmobAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawableLeft="@drawable/money"
+
+                    android:gravity="top"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:padding="10dp"
+                    android:textColorHint="#cccccc"
+                    >
+
+
+                </EditText>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/cmobCancel"
+
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/buttonroundedcancel"
+                    android:drawablePadding="12dp"
+
+                    android:gravity="center_vertical|center_horizontal|left"
+
+                    android:padding="5dp"
+                    android:textColor="#fff"
+
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/csubmitRecharge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="0.5"
+
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:drawablePadding="12dp"
+                    android:gravity="center_vertical|center_horizontal|left"
+
+                    android:padding="5dp"
+                    android:textColor="#fff"
+
+                    android:textStyle="bold"
+
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

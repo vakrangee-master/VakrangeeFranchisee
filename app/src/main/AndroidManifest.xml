@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.vakrangee.franchisee">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <permission
+        android:name="in.vakrangee.franchisee.activity.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" /> <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+    <!-- Commented for Google Restriction  Vasundhara on 28th Feb 2019 -->
+    <!--
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    -->
+    <!-- <uses-permission android:name="android.permission.READ_LOGS" /> -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--<uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />-->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.READ_CALL_LOG" /> -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="in.vakrangee.supercore.franchisee.application.VakrangeeKendraApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:noHistory="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name="com.nononsenseapps.filepicker.FilePickerActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:theme="@style/FilePickerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/nnf_provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity
+            android:name="in.vakrangee.supercore.franchisee.commongui.FilteredFilePickerActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/FilePickerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MainActivity" />
+
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.socialmedia.GoogleSignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.activity.WebviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.vakrangee.franchisee.socialmedia.FacebookLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.franchiseelogin.FranchiseeSplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.franchiseelogin.FranchiseeLoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.franchiseelogin.NextGenFranchiseeEnquiryDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.adhoc.AdhocLoginActivity"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.sitelayout.sitereadiness.SiteReadinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.nextgenfranchiseeapplication.NextGenFranchiseeApplicationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.hardwareacknowledgement.KendraAcknowledgementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.hardwareacknowledgement.NextGenVakrangeeKendraAcknowledgementActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.GuinessWorldRecordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.attendance.GuinnessAttendanceActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.event_photos.GuinnesEventPhotoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.witness_statement.GuinnessUploadWitnessStatementActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.workinprogress.WIPImagePreviewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gstdetails.GSTDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.commongui.StartUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.drawingtool.DrawingToolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.activity.DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.DashboardNewActivity"
+            android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.DashboardNewActivity" />
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="in.vakrangee.franchisee.activity.RegisterPageActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.RegisterPageActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.UpdateGeoCoordinatesActivity"
+            android:label="@string/title_activity_update_geo_coordinates"
+            android:screenOrientation="portrait" />
+        <activity android:name="in.vakrangee.franchisee.activity.UpdateGeoActivity" />
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MobileRechargActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MobileRechargActivity" />
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <activity
+            android:name="in.vakrangee.franchisee.activity.DTHRechargeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.DTHRechargeActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.CodCollectionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.CodCollectionActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.LoginActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.LoginActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.OtpActitvity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.OtpActitvity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MpinAcitivty"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MpinAcitivty" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyOutletsActitvity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyOutletsActitvity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.UploadImageActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.UploadImageActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MahavitranActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MahavitranActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MahavitranBillInfoActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MahavitranBillInfoActivity" />
+        </activity>
+
+        <service
+            android:name="in.vakrangee.franchisee.sitelayout.asyntask.FetchAddressIntentService"
+            android:exported="false" />
+        <service
+            android:name=".utils.TimeService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":TimeService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+
+                <data
+                    android:host="*"
+                    android:pathPrefix="/request-network"
+                    android:scheme="wear" />
+            </intent-filter>
+        </service>
+        <!--
+         <receiver
+             android:name=".utils.SmsListener"
+             android:exported="true">
+             <intent-filter android:priority="9999">
+                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+             </intent-filter>
+         </receiver>
+        -->
+        <!--
+        Commented for Google Restriction Vasundhara on 28th Feb 2019
+        <receiver android:name="swarajsaaj.smscodereader.receivers.OtpReader">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!--
+<receiver
+            android:name=".smsretrieval.SMSRetrievalReceiver"
+            android:exported="true">
+            <intent-filter android:priority="99999">
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!--
+        <receiver
+            android:name=".utils.SmsListener"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <receiver
+            android:name="in.vakrangee.franchisee.utils.LocationReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="xxx.yyy.intent.action.LOCATION" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="in.vakrangee.franchisee.activity.RechargeHistroyActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.RechargeHistroyActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.adapter.MyWalltetViewPager"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.adapter.MyWalltetViewPager" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyhelpLineActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyhelpLineActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyTransactionActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyTransactionActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyoutletTimingActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyoutletTimingActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyCustomerProflie"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyoutletTimingActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.supercore.franchisee.utils.GalleryImageCropUtil"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.supercore.franchisee.utils.GalleryImageCropUtil" />
+        </activity> <!-- <activity android:name="com.soundcloud.android.crop.CropImageActivity" /> -->
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MySerivcesActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MySerivcesActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyVakrangeeKendra"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyVakrangeeKendra" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyStatementActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyStatementActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.VkphotoUploadActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.VkphotoUploadActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyFieldForceActivtiy"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyFieldForceActivtiy" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.ElectricityBillPaymentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.ElectricityBillPaymentActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.PipedGasBillPaymentActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.PipedGasBillPaymentActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.LandlineBillPayment"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.LandlineBillPayment" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.WalletRechargeHistoryActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.WalletRechargeHistoryActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.TechnicalSupportActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.TechnicalSupportActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.AccountStatementActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.AccountStatementActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.TransactionReportActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.TransactionReportActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.FranchiseeProfileActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.FranchiseeProfileActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.EmployeeProfileActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.EmployeeProfileActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.InWordActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.InWordActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.InWordInformationActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.InWordInformationActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.Monitoring_Dashboard"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.Monitoring_Dashboard" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MoreDetailsActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MoreDetailsActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.OutdoorDutyActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.OutdoorDutyActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyVakrangeeKendraPhotoActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyVakrangeeKendraPhotoActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyVakrangeeKendraPhotoActivityNew"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyVakrangeeKendraPhotoActivityNew" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyVakrangeeKendraPhotoViewPager"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyVakrangeeKendraPhotoViewPager" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyVakrangeeKendraLocationDetails"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.MyVakrangeeKendraLocationDetails" />
+        </activity>
+        <activity android:name="in.vakrangee.franchisee.activity.OutdoorDutyActivityWithVL_VA" />
+        <activity android:name="in.vakrangee.franchisee.activity.MyAttendanceSystemViewPager" />
+        <activity android:name="in.vakrangee.franchisee.activity.ATMDetailsViewPager" />
+        <activity android:name="in.vakrangee.franchisee.activity.ATMROCashLoadingViewPager" />
+        <activity
+            android:name="in.vakrangee.franchisee.activity.VakrangeeKendraLayoutActivity"
+            android:label="@string/title_activity_vakrangee_kendra_layout"
+            android:parentActivityName="in.vakrangee.franchisee.activity.DashboardActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.DashboardActivity" />
+        </activity>
+        <!--<activity
+            android:name=".activity.VakrangeeKendraLayout1"
+            android:label="@string/title_activity_vakrangee_kendra_layout1"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.activity.DashboardActivity" />
+        </activity>-->
+        <activity
+            android:name="in.vakrangee.franchisee.activity.MyoutletTimingActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.sitelayout.NextGenPhotoViewPager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.activity.NextGenAcitivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.sitelayout.activity.MyVakrangeeKendraLocationDetailsNextGen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.activity.AppNotificationActivity"
+            android:screenOrientation="portrait" />
+        <!--  <activity
+              android:name="in.vakrangee.franchisee.sitelayout.sitecommencement.NextGenSiteCommencementActivity"
+              android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name="in.vakrangee.franchisee.sitelayout.sitecommencement.NextGenSiteCommencementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.workinprogress.NextGenWorkInProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.workinprogress.WorkInProgressDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".workinprogress.wipchatview.WorkInProgressChatViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.sitelayout.sitecompletion.WorkCompletionIntimationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.vakrangee.franchisee.sitelayout.mendatorybranding.MandatoryBrandingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.hardwareacknowledgement.ZBarcodeReader"
+            android:screenOrientation="portrait" /> <!-- Fabric Crashlytics -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4d4e96582eb6ec91cc4a35bb0072c88864473b55" /> <!-- Firebase Messaging Service -->
+        <service android:name="in.vakrangee.franchisee.webservice.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="in.vakrangee.franchisee.webservice.MyFirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="in.vakrangee.franchisee.service.OnClearFromRecentService"
+            android:stopWithTask="false" />
+        <service
+            android:name="in.vakrangee.franchisee.helpline.FloatingHelplineService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true" />
+        <service
+            android:name="in.vakrangee.franchisee.service.UpdateUserLatLngService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true" />
+        <!--
+             Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity android:name="in.vakrangee.franchisee.support.SupportTicketActivity" />
+        <!--
+        <receiver android:name=".support.SecretCodeReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+                <data
+                    android:host="1800"
+                    android:pathPattern=""
+                    android:scheme="android_secret_code" />
+            </intent-filter>
+        </receiver>
+        -->
+        <activity android:name="in.vakrangee.franchisee.trainingvideo.MyTrainingVideoActivity" />
+        <activity android:name="in.vakrangee.franchisee.trainingvideo.VideoPlayActivity" /> <!-- GPS Location Provider -->
+        <receiver android:name="in.vakrangee.franchisee.receiver.GpsLocationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="in.vakrangee.franchisee.documentmanager.DocumentManagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.dashboard.trial.InAugurationTrialDialogActivity"
+            android:label=""
+            android:screenOrientation="unspecified"
+            android:theme="@style/DialogActivity" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRActivity" />
+        </activity>
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.kendra_final_photo.KendraFinalPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.propreitary_activity.GWRPropreitaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.gwr.event_day_activity.GWREventDayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.kendraworkingtime.KendraWorkingTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="in.vakrangee.franchisee.gwr.dashboard.PlayMusicService"
+            android:enabled="true" />
+        <service
+            android:name="in.vakrangee.franchisee.gwr.evidence.UploadEvidenceFilesService"
+            android:enabled="true" />
+
+        <activity
+            android:name="in.vakrangee.franchisee.agreement_dispatch.AgreementDispatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.tracking_hardware.TrackingHardwareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.bcadetails.BCADetailEntryStartUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.bcadetails.pre.PreBCADataEntryDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.locationupdation.KendraFrontagePhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.atmloading.ATMActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.atmloading.ATMRoCashLoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.delivery_address.DeliveryAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="in.vakrangee.franchisee.payment_history.PaymentHistoryActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="in.vakrangee.franchisee.documentmanager.ScanAgreementImagesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".payment_details.PaymentDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".payment_details.RaiseDisputeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".payment_details.AllRaisedDisputeDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".atmtechlivechecklist.ATMTechLiveCheckListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".loandocument.LoanDocumentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".loandocument.upload_ack.UploadAcknowledgementActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".loandocument.loan_sanction.UBILoanSanctionActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".loandocument.ScanLoanAgreementImagesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".nextgenfranchiseeapplication.bank_statement.AllBankStatementActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".nextgenfranchiseeapplication.bank_statement.AddBankStatementActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".atmloading.cash_sourcing.ATMCashSourcingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".atmloading.cash_sourcing.AddATMCashSourcingDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".atmloading.cash_loading.ATMCashLoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".atmloading.cash_loading.AddATMCashLoadingDetailsActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

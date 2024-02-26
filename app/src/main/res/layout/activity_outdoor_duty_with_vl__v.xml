@@ -1,0 +1,172 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbaroutdoorVA"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/MyDrawerArrowToggle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/ffromdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calenda"
+                android:focusable="false"
+                android:gravity="top"
+                android:hint="From Date"
+                android:inputType="date"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14dp"
+                android:windowSoftInputMode="stateAlwaysHidden" />
+
+            <EditText
+                android:id="@+id/todate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_top_bg"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/calenda"
+                android:focusable="false"
+                android:gravity="top"
+                android:hint="To Date"
+                android:inputType="date"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/loginsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonroundedsubmit"
+                android:drawablePadding="5dp"
+                android:gravity="center|center_horizontal"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:hint="Status"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorPrimary" />
+
+            <Spinner
+                android:id="@+id/spnODlist"
+                style="@style/spinner_style_add_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/colorPrimary">
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/btnODFilterData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@drawable/buttonroundedsubmit"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:visibility="invisible"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/recyclerviewdataEmpety"
+                android:textColor="@color/md_red_900"
+                android:visibility="gone" />
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_outdoor_duty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

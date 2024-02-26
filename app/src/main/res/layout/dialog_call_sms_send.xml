@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <LinearLayout
+            android:id="@+id/layoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#13365C"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="Choose Mobile Number"
+                android:singleLine="true"
+                android:textColor="@color/md_white_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center|right"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:gravity="left|center"
+                android:singleLine="true"
+                android:text="Choose Mobile Number"
+                android:typeface="sans"
+                android:textColor="@color/headline_lbl"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:layout_marginBottom="3dp"
+                android:layout_height="0.2dp"
+                android:background="@color/colorGreyL6"/>
+
+            <!-- Call -->
+            <LinearLayout
+                android:id="@+id/layoutCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupMobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMobileNo"
+                        style="@style/franchisee_form_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:checked="true"
+                        android:paddingTop="5dp"
+                        android:text="Male"
+                        android:textColor="@color/headline_lbl"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonAltMobileNo"
+                        style="@style/franchisee_form_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:paddingTop="5dp"
+                        android:text="Female"
+                        android:textColor="@color/headline_lbl"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:typeface="sans" />
+
+                </RadioGroup>
+
+                <!-- Call -->
+                <LinearLayout
+                    android:id="@+id/layoutCallButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCall"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/buttonroundedsubmit"
+                        android:gravity="center"
+                        android:text="Call"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- SMS -->
+            <LinearLayout
+                android:id="@+id/layoutSMS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkboxMobileNo"
+                    style="@style/franchisee_form_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:checked="true"
+                    android:layout_gravity="center"
+                    android:text="BCA is same as Franchisee"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+                <CheckBox
+                    android:id="@+id/checkboxAltMobileNo"
+                    style="@style/franchisee_form_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_gravity="center"
+                    android:text="BCA is same as Franchisee"
+                    android:textColor="@color/headline_lbl"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+                <!-- Send -->
+                <LinearLayout
+                    android:id="@+id/layoutSendButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnSendSMS"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/buttonroundedsubmit"
+                        android:gravity="center"
+                        android:text="Send"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

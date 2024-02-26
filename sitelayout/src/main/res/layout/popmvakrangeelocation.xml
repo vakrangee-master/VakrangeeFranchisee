@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:padding="10dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/pleaseVerfity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="14dp"
+            android:text="Do you want to update your Vakrangee Kendra Location details, Please confirm ?"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/gray" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:inputType="textEmailAddress"
+                    android:text="Latitude"
+                    android:textSize="14dp"
+
+                    android:textColor="@color/submit"
+
+                    >
+
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtlat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:textSize="14dp"
+                    android:singleLine="true"
+                    android:text="name"
+                    android:textColor="@color/submit"
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="#c0c0c0" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:inputType="textEmailAddress"
+                    android:text="Longitude"
+                    android:textSize="14dp"
+
+                    android:textColor="@color/submit"
+
+                    >
+
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtlong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:textSize="14dp"
+                    android:singleLine="true"
+                    android:text="name"
+                    android:textColor="@color/submit"
+                    />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:textSize="14dp"
+                    android:ems="10"
+
+                    android:text="Accuracy"
+                    android:textColor="@color/submit">
+
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtaccuracy"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+
+                    android:drawablePadding="3dp"
+
+                    android:ems="10"
+
+                    android:text="number"
+
+                    android:textColor="@color/submit"
+                    android:singleLine="true"
+
+
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:textSize="14dp"
+                    android:text="Address"
+                    android:visibility="gone"
+                    android:textColor="@color/submit">
+
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    android:text="number"
+                    android:textColor="@color/submit"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

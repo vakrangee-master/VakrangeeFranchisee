@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NextGenFranchiseeApplication</string>
+    <string name="last_6_months_bank_statement">Last 6 Months Bank Statement</string>
+    <string name="pass_book_cheque">Pass Book/Bank Statement/ Cancelled Cheque</string>
+
+</resources>

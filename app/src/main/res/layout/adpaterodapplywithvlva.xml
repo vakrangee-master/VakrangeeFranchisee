@@ -1,0 +1,133 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@color/md_light_statusbar"
+
+    card_view:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:id="@+id/linerODClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtVAName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:text=" Nilesh Dhola - VL0003167"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/txtApplyDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:text=" Apply Date: 04-03-017"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVAStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:layout_marginLeft="5dp"
+
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="Start Date: 03-01-2017"
+            android:textSize="12dp" />
+
+
+        <TextView
+            android:id="@+id/txtVAEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:text="End Date: 05-03-2017"
+            android:textSize="12dp" />
+
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/txtVAnumberOfDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l1"
+                android:layout_marginLeft="5dp"
+
+                android:layout_weight="0.5"
+                android:gravity="start"
+                android:text="Number of day: 03"
+                android:textSize="12dp" />
+
+
+            <ImageView
+                android:id="@+id/ImgStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:gravity="end|left"
+                android:src="@drawable/pendingo"
+                android:text="Status: Pending"
+                android:textColor="@color/colorAccent"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtVAReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:singleLine="true"
+            android:text="Reason: perosal Reson"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

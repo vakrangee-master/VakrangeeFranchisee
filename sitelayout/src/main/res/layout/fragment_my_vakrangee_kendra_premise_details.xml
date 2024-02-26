@@ -1,0 +1,2655 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollViewNextGenSiteVisit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fadeScrollbars="false"
+        android:paddingRight="1dp"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="@color/text_color_fr"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <!--header Premise located-->
+                <LinearLayout
+                    android:id="@+id/layoutPremiseLocatedAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_enquiry_details_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Premise Located at:"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+                        android:id="@+id/tooltipPremiseLocatedAt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text=" i "
+                        android:textColor="@color/md_red_700"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <!-- Radio Button High Street -->
+                <LinearLayout
+                    android:id="@+id/radioPremiseLocated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/PremiseLocated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1">
+
+                        <RadioButton
+                            android:id="@+id/premiseLocatedAtHighStreet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:nextFocusUp="@+id/AreaSqFeet"
+                            android:nextFocusDown="@+id/premiseLocatedAtMall"
+                            android:text="High Street/Main Road"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/premiseLocatedAtMall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="0.13"
+                            android:nextFocusUp="@+id/premiseLocatedAtHighStreet"
+                            android:nextFocusDown="@+id/spinnerFloor"
+                            android:text="Inside Mall/Commercial/Shopping Complex"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/gray" />
+                </LinearLayout>
+
+                <!-- Floor -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Floor"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFloor"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/PremiseFloor"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/premiseLocatedAtMall"
+                        android:nextFocusDown="@+id/spinnerStructure"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Structure -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Structure"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerStructure"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/PremiseStructure"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerFloor"
+                        android:nextFocusDown="@+id/spinnerRoof"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Roof -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Roof"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRoof"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/PremiseRoof"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerStructure"
+                        android:nextFocusDown="@+id/FrontageObstructedYes"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Yes / No-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/color_enquiry_details_background"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:text="Days"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="     Yes"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="No               "
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Frontage Obstructed -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/FrontageObstructed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Frontage Obstructed"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/FrontageObstructedYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/spinnerRoof"
+                            android:nextFocusDown="@+id/FrontageObstructedNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/FrontageObstructedNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/FrontageObstructedYes"
+                            android:nextFocusDown="@+id/FootpathYes"
+                            android:text="" />
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- FootPath -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/Foothpath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Footpath"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/FootpathYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/FrontageObstructedNo"
+                            android:nextFocusDown="@+id/FootpathNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/FootpathNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/FootpathYes"
+                            android:nextFocusDown="@+id/BathroomYes"
+                            android:text="" />
+
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- 2 Adjacent shops with common wall which can not be removed -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/AdjacentShops"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="0.8"
+                            android:text="2 Adjacent shops with common wall which can not be removed"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/AdjacentShopsYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/BeamNo"
+                            android:nextFocusDown="@+id/AdjacentShopsNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/AdjacentShopsNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/AdjacentShopsYes"
+                            android:nextFocusDown="@+id/MultipleEntriesYes"
+                            android:text="" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- Multiple Entries -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/MultipleEntries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Multiple Entries "
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/MultipleEntriesYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/AdjacentShopsNo"
+                            android:nextFocusDown="@+id/MultipleEntriesNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/MultipleEntriesNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/MultipleEntriesYes"
+                            android:nextFocusDown="@+id/SiteVisitAddress1"
+                            android:text="" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- Pillars in the Center / Right / Left wall -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/Pillers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="0.8"
+                            android:text="Pillars in the Center / Right / Left wall"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/PillersYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/PantryNo"
+                            android:nextFocusDown="@+id/PillersNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/PillersNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/PillersYes"
+                            android:nextFocusDown="@+id/WindowsYes"
+                            android:text="" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- Additional Windows / Doors / Mezzanine Floor / Shelfs -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/Windows"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="0.8"
+                            android:text="Additional Windows / Doors / Mezzanine Floor / Shelfs"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/WindowsYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/PillarsNo"
+                            android:nextFocusDown="@+id/WindowsNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/WindowsNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/WindowsYes"
+                            android:nextFocusDown="@+id/BeanYes"
+                            android:text="" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- Beam on the Ceiling -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/Beam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Beam on the Ceiling"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/BeamYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/WindowsNo"
+                            android:nextFocusDown="@+id/BeamNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/BeamNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/BeamYes"
+                            android:nextFocusDown="@+id/AdjacentShopsYes"
+                            android:text="" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- Toilet -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/Bathroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Toilet"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/BathroomYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/FootpathNo"
+                            android:nextFocusDown="@+id/BathroomNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/BathroomNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/BathroomYes"
+                            android:nextFocusDown="@+id/PantryYes"
+                            android:text="" />
+
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray" />
+
+                </LinearLayout>
+
+                <!-- Pantry -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/Pantry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="Pantry"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/PantryYes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/BathroomNo"
+                            android:nextFocusDown="@+id/PantryNo"
+                            android:text="" />
+
+                        <RadioButton
+                            android:id="@+id/PantryNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/PantryYes"
+                            android:nextFocusDown="@+id/PillersYes"
+                            android:text="" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Premise details Header -->
+                <LinearLayout
+                    android:id="@+id/tvHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_enquiry_details_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:text="Premise Detail:"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tooltipPremiseDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text=" i "
+                        android:textColor="@color/md_red_700"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <!-- Feet / Inch -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Days"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Inch"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Width -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewWidthInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Width (W)"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerWidthFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusDown="@+id/spinnerWidthInch"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerWidthInch"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerWidthFeet"
+                        android:nextFocusDown="@+id/spinnerDepthFeet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Depth -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewDepthInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Depth (D)"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDepthFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerWidthInch"
+                        android:nextFocusDown="@+id/spinnerDepthInch"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDepthInch"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerDepthFeet"
+                        android:nextFocusDown="@+id/spinnerHeightFeet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Height -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewHeightInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Height (H)"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerHeightFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerDepthInch"
+                        android:nextFocusDown="@+id/spinnerHeightInch"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerHeightInch"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerHeightFeet"
+                        android:nextFocusDown="@+id/spinnerFrontageFeet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Main Entrance -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewEntranceInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Main Entrance (W)"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerEntranceFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerEntranceInch"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusDown="@+id/AreaSqFeet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Frontage -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Frontage"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFrontageFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerHeightInch"
+                        android:nextFocusDown="@+id/spinnerFrontageInch"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFrontageInch"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/spinnerFrontageFeet"
+                        android:nextFocusDown="@+id/AreaSqFeet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Main Sign Board -->
+                <LinearLayout
+                    android:id="@+id/layoutMainSignBoardDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewSignboardInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:drawableEnd="@drawable/ic_info_outline_black_24dp"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Main Signboard (L)"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMainSignBoardFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMainSignBoardInch"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/my_vakrangeekendra"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusDown="@+id/AreaSqFeet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Carpet Area -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCarpetAreaLbl"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.4"
+                        android:gravity="left"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Carpet Area (W X D)"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/AreaSqFeet"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:hint="Enter Square feet"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:nextFocusUp="@+id/spinnerFrontageInch"
+                        android:nextFocusDown="@+id/premiseLocatedAtHighStreet"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:drawSelectorOnTop="true"
+                        android:gravity="left"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Sq feet"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Address Layout -->
+                <LinearLayout
+                    android:id="@+id/layoutCompleteAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutAddressOfLocationVisited"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_enquiry_details_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="Address of Location visited:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tooltipAddressOfLocationVisited"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center"
+                            android:text=" i "
+                            android:textColor="@color/md_red_700"
+                            android:textSize="24sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:gravity="left"
+                            android:text="Address"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/SiteVisitAddress1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="Address Line 1"
+                            android:lines="3"
+                            android:maxLines="3"
+                            android:minLines="2"
+                            android:nextFocusUp="@+id/PantryNo"
+                            android:nextFocusDown="@+id/SiteVisitAddress2"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:gravity="left"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/SiteVisitAddress2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="Address Line 2"
+                            android:lines="3"
+                            android:maxLines="3"
+                            android:minLines="2"
+                            android:nextFocusUp="@+id/SiteVisitAddress1"
+                            android:nextFocusDown="@+id/SiteVisitLandmark"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:gravity="left"
+                            android:text="Landmark"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/SiteVisitLandmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="Landmark"
+                            android:lines="1"
+                            android:maxLines="3"
+                            android:minLines="2"
+                            android:nextFocusUp="@+id/SiteVisitAddress2"
+                            android:nextFocusDown="@+id/SpinnerCountryActivity_country_spinner"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="left|center"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="State"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerCountryActivity_country_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/SiteVisitLandmark"
+                            android:nextFocusDown="@+id/SpinnerCountryActivity_state_spinner"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="left|center"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="District"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerCountryActivity_state_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/SpinnerCountryActivity_country_spinner"
+                            android:nextFocusDown="@+id/SpinnerCountryActivity_city_spinner"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="left|center"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Village/Town/City"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/SpinnerCountryActivity_city_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/SpinnerCountryActivity_state_spinner"
+                            android:nextFocusDown="@+id/SiteVisitWardNo"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/wardNoTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:gravity="left|center"
+                            android:text="Ward No."
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/SiteVisitWardNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:nextFocusUp="@+id/SpinnerCountryActivity_city_spinner"
+                            android:nextFocusDown="@+id/SiteVisitPincode"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/gray"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:gravity="left|center"
+                            android:text="PIN"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/SiteVisitPincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:nextFocusUp="@+id/SiteVisitWardNo"
+                            android:nextFocusDown="@+id/roadLevel"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Premise Level / Premise Shape -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <!-- Premise Level Header -->
+                    <LinearLayout
+                        android:id="@+id/layoutPremiseLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_enquiry_details_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="Premise Level:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tooltipPremiseLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center"
+                            android:text=" i "
+                            android:textColor="@color/md_red_700"
+                            android:textSize="24sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <!-- Road Level / Below Road Level -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RadioGroup
+                            android:id="@+id/PremiseLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:weightSum="1">
+
+                            <RadioButton
+                                android:id="@+id/roadLevel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:checked="false"
+                                android:nextFocusUp="@+id/SiteVisitPincode"
+                                android:nextFocusDown="@+id/belowRoad"
+                                android:text="Road Level"
+                                android:textColor="@color/text_color_fr"
+                                android:textSize="14dp" />
+
+                            <RadioButton
+                                android:id="@+id/belowRoad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="0.13"
+                                android:checked="false"
+                                android:nextFocusUp="@+id/roadLevel"
+                                android:nextFocusDown="@+id/closestBankBranch1"
+                                android:text="Below Road Level"
+                                android:textColor="@color/text_color_fr"
+                                android:textSize="14dp" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <!-- Premise Shape Header -->
+                    <LinearLayout
+                        android:id="@+id/layoutPremiseShape"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_enquiry_details_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="Premise Shape:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tooltipPremiseShape"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center"
+                            android:text=" i "
+                            android:textColor="@color/md_red_900"
+                            android:textSize="24sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <!-- Premise Shape -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp"
+                            android:clickable="true" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <!-- Site Layout Sketch -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="Site Layout Sketch"
+                        android:textColor="@color/text_color_fr"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgSiteLayoutSketchInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:src="@drawable/ic_info_outline_black_24dp" />
+                </LinearLayout>
+
+                <!-- Other Site Layout Sketch -->
+                <LinearLayout
+                    android:id="@+id/layoutSketchOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.4"
+                        android:text="@string/hint_site_layout_sketch" />
+
+                    <ImageView
+                        android:id="@+id/imgOtherSketch"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:src="@drawable/site_layou_place_holder" />
+
+                </LinearLayout>
+
+                <!-- Main Sign Board-->
+                <LinearLayout
+                    android:id="@+id/layoutMainSignBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/layoutPrvosionalMainSignboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/color_enquiry_details_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:text="Main Signboard:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tooltipProvisionalSignBoard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center"
+                            android:text=" i "
+                            android:textColor="@color/md_red_900"
+                            android:textSize="24sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Days"
+                            android:textSize="12sp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Inch"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutLength"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:gravity="left"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Length"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerProvisionalLengthFeet"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:entries="@array/my_vakrangeekendra"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusDown="@+id/spinnerWidthInch"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerProvisionalLengthInch"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:entries="@array/my_vakrangeekendra"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/spinnerWidthFeet"
+                            android:nextFocusDown="@+id/spinnerDepthFeet"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:gravity="left"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Width (Max: 3 feet)"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerProvisionalWidthFeet"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:entries="@array/my_vakrangeekendra"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusDown="@+id/spinnerWidthInch"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerProvisionalWidthInch"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="0.3"
+                            android:background="@drawable/gradient_white_spinner"
+                            android:drawSelectorOnTop="true"
+                            android:entries="@array/my_vakrangeekendra"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:nextFocusUp="@+id/spinnerWidthFeet"
+                            android:nextFocusDown="@+id/spinnerDepthFeet"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Feet"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Closest Bank Branch -->
+                <LinearLayout
+                    android:id="@+id/layoutClosestBankBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_enquiry_details_background"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.80"
+                        android:text="Nearest Bank (In order of distance) :"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+                        android:id="@+id/tooltipClosestBankBranch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0.20"
+                        android:gravity="center"
+                        android:text=" i "
+                        android:textColor="@color/md_red_700"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/closestBankBranch1"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/belowRoad"
+                        android:nextFocusDown="@+id/closestBankBranch2"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="2"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/closestBankBranch2"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/closestBankBranch1"
+                        android:nextFocusDown="@+id/closestBankBranch3"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/closestBankBranch3"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/closestBankBranch2"
+                        android:nextFocusDown="@+id/closestATM1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Closest ATM -->
+                <LinearLayout
+                    android:id="@+id/layoutClosestATM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_enquiry_details_background"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.8"
+                        android:padding="5dp"
+                        android:text="Nearest ATM (In order of distance) :"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tooltipClosestATM"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="0.20"
+                        android:gravity="center"
+                        android:text=" i "
+                        android:textColor="@color/md_red_700"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="1"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/closestATM1"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+
+
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/closestBankBranch3"
+                        android:nextFocusDown="@+id/closestATM2"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="2"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/closestATM2"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/closestATM1"
+                        android:nextFocusDown="@+id/closestATM2"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="3"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/closestATM3"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1.8"
+                        android:background="@drawable/gradient_white_spinner"
+                        android:drawSelectorOnTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:nextFocusUp="@+id/closestATM2"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <!-- Interior Work Status -->
+                <LinearLayout
+                    android:id="@+id/layoutInteriorWorkStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|top"
+                        android:background="@color/color_enquiry_details_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="Interior Work Status "
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tooltipInteriorWork"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center"
+                            android:text=" i "
+                            android:textColor="@color/md_red_700"
+                            android:textSize="24sp"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|top"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Interior Work Status "
+                                android:textColor="@color/md_black_1000"
+                                android:textSize="18sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/interiorWorkStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:weightSum="4">
+
+                                <RadioButton
+                                    android:id="@+id/InteriorWorkYTS"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical"
+                                    android:nextFocusUp="@+id/spinnerRoof"
+                                    android:nextFocusDown="@+id/FrontageObstructedNo"
+                                    android:text="Not Started"
+                                    android:textColor="@color/gray" />
+
+                                <RadioButton
+                                    android:id="@+id/InteriorWorkInProgress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical"
+                                    android:nextFocusUp="@+id/FrontageObstructedYes"
+                                    android:nextFocusDown="@+id/FootpathYes"
+                                    android:text="In Progress"
+                                    android:textColor="@color/gray" />
+
+                                <RadioButton
+                                    android:id="@+id/InteriorWorkCompleted"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical"
+                                    android:text="Completed"
+                                    android:textColor="@color/gray" />
+
+                                <RadioButton
+                                    android:id="@+id/InteriorWorkApproved"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="left|center_vertical"
+                                    android:text="Approved"
+                                    android:textColor="@color/gray" />
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- Start Date -->
+                    <LinearLayout
+                        android:id="@+id/layoutStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewStartDateLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text="Start Date"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:gravity="center"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <!-- Expected Completion Date -->
+                    <LinearLayout
+                        android:id="@+id/layoutCompletionDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewCompletionDateLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/estimated_completion_date"
+                            android:textColor="@color/text_color_fr"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewCompletionDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_bottom_bg"
+                            android:drawableRight="@drawable/ic_date_range_black_24dp"
+                            android:gravity="center"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!-- END Interior Work Status -->
+
+                <!-- Remarks -->
+                <LinearLayout
+                    android:id="@+id/Remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_enquiry_details_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="Remarks: "
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextRemarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="0.6"
+                        android:background="@drawable/edittext_bottom_bg"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|top"
+                        android:hint="Enter Remarks"
+                        android:paddingLeft="5dp" />
+
+
+                </LinearLayout>
+                <!-- END Remarks -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:background="@color/grey"
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutVerified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/checkBoxProfileVerify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/reviewed_and_verified"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit_sitevisit"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@color/color_enquiry_details_background"
+            android:text="Submit"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>
+

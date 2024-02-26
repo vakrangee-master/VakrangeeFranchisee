@@ -1,0 +1,15 @@
+include ':app', ':library', ':ucrop', ':documentmanager', ':simcarddetails', ':nextgenfranchiseeapplication', ':workinprogress', ':hardwareacknowledgement', ':bcadetails', ':locationupdation', ':atmloading', ':supercore', ':YouTubeAndroidPlayerApi', ':barcode_reader', ':smsverifycatcher', ':chatview', ':scanlib', ':drawview', ':calendarview', ':callrecord', ':geofencing', ':networktesting', ':franchiseeexit'
+project(':drawview').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\drawview')
+project(':supercore').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\supercore')
+project(':YouTubeAndroidPlayerApi').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\YouTubeAndroidPlayerApi')
+project(':barcode_reader').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\barcode_reader')
+project(':smsverifycatcher').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\smsverifycatcher')
+project(':chatview').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\chatview')
+project(':scanlib').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\scanlib')
+project(':calendarview').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\calendarview')
+project(':callrecord').projectDir = new File('..\\CommonRepo\\VakrangeeSuperCore\\callrecord')
+project(':geofencing').projectDir = new File('..\\VKMS\\geofencing')
+project(':franchiseeexit').projectDir = new File('..\\VKMS\\franchiseeexit')
+include ':sitelayout'
+include ':atmtechlivechecklist'
+include ':loandocument'

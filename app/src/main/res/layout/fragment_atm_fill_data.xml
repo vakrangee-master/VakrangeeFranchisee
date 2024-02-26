@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imeinumber"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+
+                    android:id="@+id/chquenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/edittext_bottom_bg"
+
+                    android:drawablePadding="10dp"
+                    android:gravity="top"
+                    android:hint="@string/chquenumber"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="#cccccc"></EditText>
+
+                <EditText
+                    android:id="@+id/chquedate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/edittext_bottom_bg"
+
+                    android:drawablePadding="10dp"
+                    android:gravity="top"
+                    android:hint="@string/chquedate"
+                    android:nextFocusDown="@+id/rMobileNumber"
+                    android:nextFocusLeft="@+id/rMobileNumber"
+                    android:nextFocusRight="@+id/rMobileNumber"
+                    android:nextFocusUp="@+id/rMobileNumber"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColorHint="#cccccc">
+
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/chqueamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="-2dp"
+                    android:background="@drawable/edittext_bottom_bg"
+                    android:drawablePadding="10dp"
+                    android:gravity="top"
+                    android:hint="@string/chqueamount"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:textColorHint="#cccccc">
+
+
+                </EditText>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:id="@+id/imageViewcapture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/editprofile" />
+
+                <ImageView
+                    android:id="@+id/imageVieawdisplay"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/gallery"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/l1"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/rCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/buttonroundedcancel"
+                    android:padding="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/rSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/buttonroundedsubmit"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

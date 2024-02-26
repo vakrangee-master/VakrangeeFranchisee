@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "708693657183",
+    "firebase_url": "https://vakrangee-franchisee.firebaseio.com",
+    "project_id": "vakrangee-franchisee",
+    "storage_bucket": "vakrangee-franchisee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708693657183:android:f740673f6b2a0a04",
+        "android_client_info": {
+          "package_name": "in.vakrangee.franchisee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708693657183-jurcu6qekm6vh839slv1m7mnpgt7pmog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ-d58YEHOkSIx2xQ1mGJa2TGqRce6CFE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- Body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Witness Fragment-->
+                <LinearLayout
+                    android:id="@+id/layoutParentAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentWitness"
+                        android:name="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRWitnessFragment"
+                        class="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRWitnessFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="fragmentWitness" />
+
+                </LinearLayout>
+
+                <!--  Camera Fragment -->
+                <LinearLayout
+                    android:id="@+id/layoutParentContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/fragmentCamera"
+                        android:name="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRCameraManFragment"
+                        class="in.vakrangee.franchisee.gwr.gwrwitness_camera.GWRCameraManFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:tag="fragmentCamera" />
+
+                </LinearLayout>
+
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

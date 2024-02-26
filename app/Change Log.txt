@@ -1,0 +1,39 @@
+v1.0.0.7
+- Added Validation into Next Gen Site Visit Module.
+- Added Crashlytics and Firebase
+
+v1.0.0.8 and v1.0.0.9
+- Added Version Name, Terms Of Use and Privacy Policy on Login Screen.
+- Changed NextGen Site Search Feature GUI.
+
+v1.0.0.10 [VersionCode - 12]
+- Update FCMId on Server
+- Handle Notification For Site Re-Submission.
+
+[NextGen Site Visit]
+- Profile: Show Status/TimeLine Dialog in Profile option.
+- Kendra Location: Added error label and Changed Submit from Image to Floating Button.
+- Kendra Photo: Added error label and show Photo Gallery Dialog on click on photo.
+- NextGen Site Visit:
+    1. SiteAllow to enter Remarks by user into Site Visit Detail while submission.
+    2. Showing error details in case of Site Send Back For Correction.
+- Not allow to edit if site status is SITE_VERIFIED_AND_APPROVED, SITE_REJECTED, SITE_HOLD.
+
+- Bug Fixes from Crashlytics
+
+v1.0.0.11 [VersionCode - 13]                            [7th June 2018]
+- Added Scroll into NextGen Site Visit Profile
+- Get FCMId on Login Screen.
+- Corrected Status Dialog to support lower devices.
+
+v1.0.0.12 [VersionCode - 14]
+- Implemented Reliance JIO Prepaid Recharge.
+
+v1.0.0.13 [VersionCode - 15]
+- Integrated NextGen Site Commencement.
+- Minor Bug Fixes
+
+v1.0.0.14 [VersionCode - 16]
+- Integrated Site Work in Progress.
+- Minor Bug Fixes
+

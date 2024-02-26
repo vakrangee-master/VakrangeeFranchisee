@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:orientation="vertical">
+
+    <com.shrikanthravi.chatview.widget.ChatView
+        android:id="@+id/chatView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rightBubbleLayoutColor="#ECE5DD"
+        android:background="@android:color/transparent"
+        app:chatViewBackgroundColor="@android:color/transparent"
+        android:layout_above="@+id/sendLL"
+        app:leftBubbleLayoutColor="#ECE5DD"
+        app:textSize="10sp"
+        app:leftBubbleTextColor="@android:color/black"
+        app:rightBubbleTextColor="@android:color/black"
+        app:showSenderLayout="true"
+        app:showSenderName="true">
+
+    </com.shrikanthravi.chatview.widget.ChatView>
+
+</LinearLayout>

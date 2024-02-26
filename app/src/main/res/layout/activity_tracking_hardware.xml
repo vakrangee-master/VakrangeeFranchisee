@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".agreement_dispatch.AgreementDispatchActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/MyDrawerArrowToggle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--layout Main hardware Delivery-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:id="@+id/mainLayoutHandDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEAEA"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EAEAEA"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <!--layout awb no-->
+                <LinearLayout
+                    android:id="@+id/layoutAwb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/txtlayoutAwbLbl"
+                        style="@style/franchisee_form_header"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.6"
+                        android:text="Airway Bill No (AWB)"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+                <!--layout button GO-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/editTextAwb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_top_bg"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-"
+                        android:gravity="start"
+                        android:hint="Enter Airway Bill No (AWB)"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="25"
+                        android:padding="8dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/buttonroundedsubmit"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="  GO  "
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dash_line"
+                android:layerType="software" />
+
+            <!--layout Origin-->
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewBasicInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp"
+                    app:contentPadding="5dp">
+
+                    <!--layout main background gradient-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gradient"
+                        android:orientation="vertical">
+
+                        <!--layout main set data-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_20"
+                            android:layout_marginLeft="@dimen/dimen_20"
+                            android:layout_marginRight="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_20"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:paddingTop="@dimen/dimen_10"
+                            android:visibility="visible">
+                            <!--layout AWB or No. Package-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+                                <!--layout AWB no display-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/director"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:paddingRight="@dimen/activity_margin"
+                                        android:paddingTop="@dimen/activity_margin"
+                                        android:text="AWB No."
+                                        android:textAllCaps="true"
+                                        android:textSize="@dimen/lbl_directory" />
+
+                                    <TextView
+                                        android:id="@+id/textCNNumber"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="-"
+                                        android:textAllCaps="true"
+                                        android:textColor="#111"
+                                        android:textSize="22dp" />
+
+                                </LinearLayout>
+                                <!--layout No. package display-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:paddingTop="@dimen/activity_margin"
+                                        android:text="No Of Package"
+                                        android:textAllCaps="true"
+                                        android:textSize="@dimen/lbl_directory" />
+
+                                    <TextView
+                                        android:id="@+id/textTotalPackage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/lbl_value"
+                                        android:textSize="22dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <!--draw line -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@drawable/dash_line"
+                                android:layerType="software" />
+                            <!--frame inside GIF image and ALl information show-->
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <!--GIF image-->
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/imgDelivery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:alpha="0.5"
+                                    android:visibility="gone"
+                                    android:src="@drawable/deliverygif" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <!--layout from and to and  status-->
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="@dimen/activity_margin"
+                                        android:paddingRight="@dimen/activity_margin"
+                                        android:weightSum="3">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="Ship On"
+                                                android:textAllCaps="true"
+                                                android:textSize="12dp" />
+
+                                            <TextView
+                                                android:id="@+id/textOriginName"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/lbl_value"
+                                                android:textSize="16dp" />
+                                        </LinearLayout>
+                                        <!--layout status-->
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="5dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/dash_line"
+                                                android:layerType="software" />
+
+                                            <TextView
+                                                android:id="@+id/textStatus"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:text="Status"
+                                                android:textColor="#008000"
+                                                android:textSize="18sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="Delivery On"
+                                                android:textAllCaps="true"
+                                                android:textSize="12dp" />
+
+                                            <TextView
+                                                android:id="@+id/textDestinationName"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/lbl_value"
+                                                android:textSize="16dp" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <!--layout shipment and Exp. Delivery date-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="16dp"
+                                        android:paddingRight="16dp"
+                                        android:weightSum="3">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="Shipment"
+                                                android:textSize="12dp" />
+
+                                            <TextView
+                                                android:id="@+id/textShipmentDate"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/lbl_value"
+                                                android:textSize="16dp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="Expected Delivery"
+                                                android:textSize="12dp" />
+
+                                            <TextView
+                                                android:id="@+id/textExpDate"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/lbl_value"
+                                                android:textSize="16dp" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                    <!--layout Delivery date and POD Pdf-->
+                                    <LinearLayout
+                                        android:id="@+id/layoutDelivery"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="16dp"
+                                        android:paddingRight="16dp"
+                                        android:weightSum="3">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="Schedule Delivery Date"
+                                                android:textSize="12dp" />
+
+                                            <TextView
+                                                android:id="@+id/textDeliveryDate"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/lbl_value"
+                                                android:textSize="16dp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/layoutPOD"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="5dp"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:gravity="center"
+                                                android:text="POD"
+                                                android:textSize="12dp" />
+
+                                            <ImageView
+                                                android:id="@+id/imgPDF"
+                                                android:layout_width="24dp"
+                                                android:layout_height="24dp"
+                                                android:layout_gravity="center"
+                                                android:background="@drawable/pdf"
+                                                android:fontFamily="sans-serif-condensed"
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/lbl_value"
+                                                android:textSize="16dp" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </FrameLayout>
+                            <!--if status not delivery show only details-->
+                            <!--like delivery by , reason, received by-->
+                            <LinearLayout
+                                android:id="@+id/layoutTrackingDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="Tracking Details"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/textTrackingDetails"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/lbl_value"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                            <!--if status - dleivery - show delivery history-->
+
+                            <LinearLayout
+                                android:id="@+id/layoutDeliveryStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dash_line"
+                                    android:layerType="software" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="Delivery By"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/textTrackingStatus"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/lbl_value"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="@dimen/activity_margin"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="Received By"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/textTrackingRec"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text=" -"
+                                        android:textColor="@color/lbl_value"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:id="@+id/layoutReason"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="@dimen/activity_margin"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="Reason"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/textTrackingReason"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/lbl_value"
+                                        android:textSize="14dp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

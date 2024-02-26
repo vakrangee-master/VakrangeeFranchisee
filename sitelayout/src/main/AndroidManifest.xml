@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.vakrangee.franchisee.sitelayout">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application>
+        <activity
+            android:name=".mendatorybranding.KendraInteriorsActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".asyntask.FetchAddressIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".NextGenPhotoViewPager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sitereadiness.SiteReadinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyVakrangeeKendraLocationDetailsNextGen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sitecommencement.NextGenSiteCommencementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sitecompletion.WorkCompletionIntimationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mendatorybranding.MandatoryBrandingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".finalrmapproval.MainFinalRMApprovalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".update_kendra_address.UpdateKendraAddressDetailsActivity"
+            android:screenOrientation="portrait" />
+
+
+    </application>
+
+   <!-- <queries>
+        &lt;!&ndash; WebView &ndash;&gt;
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+
+        &lt;!&ndash; Camera &ndash;&gt;
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        &lt;!&ndash; Gallery &ndash;&gt;
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>-->
+
+</manifest>

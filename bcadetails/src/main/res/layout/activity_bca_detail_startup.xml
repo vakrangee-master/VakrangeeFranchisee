@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarBCADetailEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/MyDrawerArrowToggle" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/layout_steeper_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/grey"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment_steeper_header_fragement"
+                android:name="in.vakrangee.franchisee.bcadetails.BCAHeaderStepperFragment"
+                class="in.vakrangee.franchisee.bcadetails.BCAHeaderStepperFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:tag="SteeperHeader" />
+
+        </LinearLayout>
+
+        <!-- Body -->
+        <in.vakrangee.franchisee.nextgenfranchiseeapplication.CustomScrollView
+            android:id="@+id/fapScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:paddingRight="3dp"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/colorLightPrimary"
+            android:scrollbars="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layoutFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/fragmentBCADetailEntry"
+                    android:name="in.vakrangee.franchisee.bcadetails.BCADetailEntryStartUpFragment"
+                    class="in.vakrangee.franchisee.bcadetails.BCADetailEntryStartUpFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="fragmentBCADetailEntry" />
+
+            </LinearLayout>
+
+        </in.vakrangee.franchisee.nextgenfranchiseeapplication.CustomScrollView>
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/buttonround"
+                android:gravity="center_vertical"
+                android:minHeight="32dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="5dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="5dp"
+                android:text="Back"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/headline_lbl"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.40"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtPaging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="32dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/buttonround"
+                android:gravity="center_vertical"
+                android:minHeight="32dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="5dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="5dp"
+                android:text="Next"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/headline_lbl"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

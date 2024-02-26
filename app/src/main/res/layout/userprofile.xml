@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editpro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/pleaseVerfity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Set Profile Image."
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+
+        <TextView
+            android:id="@+id/txtGallery"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/gallery"
+            android:text="  Gallery"
+            android:textColor="@color/submit"
+            android:textStyle="normal"
+
+
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+        <TextView
+            android:id="@+id/txtCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/editprofile"
+            android:gravity="center"
+            android:text="  Camera"
+            android:textColor="@color/submit"
+            android:textStyle="normal"
+
+
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#c0c0c0" />
+
+        <TextView
+            android:id="@+id/txtCancel"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="10dp"
+
+
+            android:drawableStart="@drawable/cancelpro"
+            android:text="  Cancel"
+            android:textColor="@color/submit"
+            android:textStyle="normal"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

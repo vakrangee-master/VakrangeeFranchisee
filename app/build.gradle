@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 32
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "in.vakrangee.franchisee"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 38
+        versionName "2.27"
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips", "arm64","arm64-v8a",  "mips64", "x86_64"
+
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    if (project.hasProperty("MyProject.properties")
+            && new File(project.property("MyProject.properties")).exists()) {
+
+        Properties props = new Properties()
+        props.load(new FileInputStream(file(project.property("MyProject.properties"))))
+
+        signingConfigs {
+            release {
+                storeFile file(props['keystore'])
+                storePassword props['keystore.password']
+                keyAlias props['keyAlias']
+                keyPassword props['keyPassword']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            if (project.hasProperty("MyProject.properties")
+                    && new File(project.property("MyProject.properties")).exists()) {
+
+                signingConfig signingConfigs.release
+            }
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/2'] } }
+}
+
+buildscript {
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+
+
+    }
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'
+}
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url 'https://maven.fabric.io/public' }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+   // implementation 'com.google.android.material:material:1.8.0-alpha01'
+    implementation 'com.google.android.material:material:1.1.0-alpha06'
+
+    implementation 'com.github.darshan-miskin:PinView-Android:v1.1.7'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.github.vipulasri:timelineview:1.1.2'
+    // For FCM
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.2@aar') {   // For Crashlytics
+        transitive = true;
+    }
+    implementation 'androidx.work:work-runtime:2.7.1'
+
+
+    implementation project(path: ':supercore')
+    implementation project(path: ':documentmanager')
+    implementation project(path: ':simcarddetails')
+    implementation project(path: ':nextgenfranchiseeapplication')
+    implementation project(path: ':workinprogress')
+    implementation project(path: ':hardwareacknowledgement')
+    implementation project(path: ':bcadetails')
+    implementation project(path: ':locationupdation')
+    implementation project(path: ':atmloading')
+    implementation project(path: ':geofencing')
+    apply plugin: 'kotlin-android-extensions'
+    implementation project(path: ':networktesting')
+    implementation project(path: ':sitelayout')
+    implementation project(path: ':atmtechlivechecklist')
+    implementation project(path: ':loandocument')
+    implementation project(path: ':franchiseeexit')
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: "org.sonarqube"
+apply plugin: 'com.google.gms.google-services'

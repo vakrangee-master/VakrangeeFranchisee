@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/YouTubeAndroidPlayerApi" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/barcode_reader" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/calendarview" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/callrecord" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/chatview" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/drawview" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/scanlib" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/smsverifycatcher" />
+            <option value="$PROJECT_DIR$/../CommonRepo/VakrangeeSuperCore/supercore" />
+            <option value="$PROJECT_DIR$/../VKMS/franchiseeexit" />
+            <option value="$PROJECT_DIR$/../VKMS/geofencing" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/atmloading" />
+            <option value="$PROJECT_DIR$/atmtechlivechecklist" />
+            <option value="$PROJECT_DIR$/bcadetails" />
+            <option value="$PROJECT_DIR$/documentmanager" />
+            <option value="$PROJECT_DIR$/hardwareacknowledgement" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/loandocument" />
+            <option value="$PROJECT_DIR$/locationupdation" />
+            <option value="$PROJECT_DIR$/networktesting" />
+            <option value="$PROJECT_DIR$/nextgenfranchiseeapplication" />
+            <option value="$PROJECT_DIR$/simcarddetails" />
+            <option value="$PROJECT_DIR$/sitelayout" />
+            <option value="$PROJECT_DIR$/ucrop" />
+            <option value="$PROJECT_DIR$/workinprogress" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

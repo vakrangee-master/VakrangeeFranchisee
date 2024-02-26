@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    >
+
+
+    <FrameLayout
+        android:id="@+id/fout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/scanPadding"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/sourceFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/scanPadding">
+
+            <ImageView
+                android:id="@+id/sourceImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true" />
+        </FrameLayout>
+
+        <com.scanlibrary.PolygonView
+            android:id="@+id/polygonView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"></com.scanlibrary.PolygonView>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/lout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fout"
+        android:layout_weight="12"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/rotate_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_light"
+            android:onClick="rotateRight"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rotate_right"
+            android:text="Rotate right" />
+
+        <ImageButton
+            android:id="@+id/rotate_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_light"
+            android:onClick="rotateLeft"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rotate_left"
+            android:text="Rotate Left" />
+
+
+        <ImageButton
+            android:id="@+id/add_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_light"
+            android:onClick="rotateLeft"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_more1"
+            android:visibility="gone"
+            android:text="Add More" />
+
+        <ImageButton
+            android:id="@+id/Done"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/background_light"
+            android:onClick="writeToDatabase"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/done"
+            android:text="Done" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
